@@ -22,8 +22,8 @@ class CustomUIView: UIView {
         let color2 = hexStringToUIColor(hex: "FBEA58").cgColor//UIColor(red: 0.0470588, green: 0.486275, blue: 0.839216, alpha: 1).cgColor
         gradientLayer.colors = [color1, color2]
         gradientLayer.locations = [0.0, 1.0]
-        gradientLayer.startPoint = CGPoint(x: 0.5, y: 0)
-        gradientLayer.endPoint = CGPoint(x: 0, y: 0.5)
+        gradientLayer.startPoint = CGPoint(x: 1, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 0, y: 1)
         //mainParent.layer.insertSublayer(gradientLayer, at: 0)
         self.layer.addSublayer(gradientLayer)
     }

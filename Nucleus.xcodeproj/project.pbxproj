@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EF8B80481FA32F7800A4924E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B80471FA32F7800A4924E /* AppDelegate.swift */; };
-		EF8B804A1FA32F7800A4924E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B80491FA32F7800A4924E /* ViewController.swift */; };
+		EF8B804A1FA32F7800A4924E /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B80491FA32F7800A4924E /* ProfileController.swift */; };
 		EF8B804D1FA32F7800A4924E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF8B804B1FA32F7800A4924E /* Main.storyboard */; };
 		EF8B80501FA32F7800A4924E /* Nucleus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF8B804E1FA32F7800A4924E /* Nucleus.xcdatamodeld */; };
 		EF8B80521FA32F7800A4924E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF8B80511FA32F7800A4924E /* Assets.xcassets */; };
@@ -16,6 +16,7 @@
 		EF8B80601FA32F7800A4924E /* NucleusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B805F1FA32F7800A4924E /* NucleusTests.swift */; };
 		EF8B806B1FA32F7800A4924E /* NucleusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B806A1FA32F7800A4924E /* NucleusUITests.swift */; };
 		EF8B80791FA34BE700A4924E /* CustomUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B80781FA34BE700A4924E /* CustomUIView.swift */; };
+		EF8B807B1FA3925700A4924E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B807A1FA3925700A4924E /* LoginController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +39,7 @@
 /* Begin PBXFileReference section */
 		EF8B80441FA32F7800A4924E /* Nucleus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nucleus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF8B80471FA32F7800A4924E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EF8B80491FA32F7800A4924E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EF8B80491FA32F7800A4924E /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		EF8B804C1FA32F7800A4924E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF8B804F1FA32F7800A4924E /* Nucleus.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Nucleus.xcdatamodel; sourceTree = "<group>"; };
 		EF8B80511FA32F7800A4924E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +52,7 @@
 		EF8B806A1FA32F7800A4924E /* NucleusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NucleusUITests.swift; sourceTree = "<group>"; };
 		EF8B806C1FA32F7800A4924E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF8B80781FA34BE700A4924E /* CustomUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIView.swift; sourceTree = "<group>"; };
+		EF8B807A1FA3925700A4924E /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,13 +104,14 @@
 			isa = PBXGroup;
 			children = (
 				EF8B80471FA32F7800A4924E /* AppDelegate.swift */,
-				EF8B80491FA32F7800A4924E /* ViewController.swift */,
+				EF8B80491FA32F7800A4924E /* ProfileController.swift */,
 				EF8B804B1FA32F7800A4924E /* Main.storyboard */,
 				EF8B80511FA32F7800A4924E /* Assets.xcassets */,
 				EF8B80531FA32F7800A4924E /* LaunchScreen.storyboard */,
 				EF8B80561FA32F7800A4924E /* Info.plist */,
 				EF8B804E1FA32F7800A4924E /* Nucleus.xcdatamodeld */,
 				EF8B80781FA34BE700A4924E /* CustomUIView.swift */,
+				EF8B807A1FA3925700A4924E /* LoginController.swift */,
 			);
 			path = Nucleus;
 			sourceTree = "<group>";
@@ -267,8 +270,9 @@
 			files = (
 				EF8B80501FA32F7800A4924E /* Nucleus.xcdatamodeld in Sources */,
 				EF8B80791FA34BE700A4924E /* CustomUIView.swift in Sources */,
-				EF8B804A1FA32F7800A4924E /* ViewController.swift in Sources */,
+				EF8B804A1FA32F7800A4924E /* ProfileController.swift in Sources */,
 				EF8B80481FA32F7800A4924E /* AppDelegate.swift in Sources */,
+				EF8B807B1FA3925700A4924E /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +438,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D5TS66R994;
 				INFOPLIST_FILE = Nucleus/Info.plist;
@@ -449,6 +454,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D5TS66R994;
 				INFOPLIST_FILE = Nucleus/Info.plist;

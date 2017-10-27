@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CustomUIView.swift
 //  Nucleus
 //
 //  Created by Bezaleel Ashefor on 27/10/2017.
@@ -7,21 +7,25 @@
 //
 
 import UIKit
-
-class ViewController: UIViewController {
+class CustomUIView: UIView {
     
     let gradientLayer = CAGradientLayer()
-
-    @IBOutlet weak var mainParent: UIView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    override func layoutSubviews() {
+        // resize your layers based on the view's new frame
+        gradientLayer.frame = self.bounds;
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func awakeFromNib() {
+        gradientLayer.frame = self.bounds
+        let color1 = hexStringToUIColor(hex: "498207").cgColor //UIColor(red: 0.00392157, green: 0.862745, blue: 0.384314, alpha: 1).cgColor
+        let color2 = hexStringToUIColor(hex: "FBEA58").cgColor//UIColor(red: 0.0470588, green: 0.486275, blue: 0.839216, alpha: 1).cgColor
+        gradientLayer.colors = [color1, color2]
+        gradientLayer.locations = [0.0, 1.0]
+        gradientLayer.startPoint = CGPoint(x: 0.5, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 0, y: 0.5)
+        //mainParent.layer.insertSublayer(gradientLayer, at: 0)
+        self.layer.addSublayer(gradientLayer)
     }
     
     func hexStringToUIColor (hex:String) -> UIColor {
@@ -69,6 +73,6 @@ class ViewController: UIViewController {
         return UIColor.black
     }
 
-
+    
 }
 

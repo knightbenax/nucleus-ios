@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="frn-cv-NZK">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="frn-cv-NZK" customClass="CustomUIView" customModule="Nucleus" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" red="0.2901960784" green="0.40784313729999999" blue="0.74117647060000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -28,6 +29,7 @@
                             <constraint firstAttribute="trailing" secondItem="frn-cv-NZK" secondAttribute="trailing" id="geE-OM-Qnw"/>
                             <constraint firstAttribute="bottom" secondItem="frn-cv-NZK" secondAttribute="bottom" id="wvx-N1-abB"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="6h4-mk-qOo"/>
                     </view>
                     <connections>
                         <outlet property="mainParent" destination="frn-cv-NZK" id="SbM-3E-64f"/>

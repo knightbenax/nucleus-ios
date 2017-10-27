@@ -12,22 +12,44 @@ class LoginController: UIViewController {
     
     @IBOutlet weak var mainView: UIView!
     
+    @IBOutlet weak var registerBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         setBg()
+        setButton()
+    }
+    
+    func setButton(){
+        registerBtn.layer.shadowColor = UIColor.black.cgColor
+        registerBtn.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        registerBtn.layer.shadowRadius = 20
         
+        registerBtn.layer.shadowOpacity = 0.3
+        registerBtn.layer.cornerRadius = 5
     }
     
     func setBg(){
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        
         if DeviceType.IS_IPHONE_X {
-            let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
             backgroundImage.image = UIImage(named: "iPhoneX")
-            backgroundImage.contentMode =  UIViewContentMode.scaleAspectFill
-            self.view.insertSubview(backgroundImage, at: 0)
             //print("== ()")
+        } else if DeviceType.IS_IPHONE_6P {
+            backgroundImage.image = UIImage(named: "iphone_6p")
+        } else if DeviceType.IS_IPHONE_6 {
+            backgroundImage.image = UIImage(named: "iphone_6")
+        } else if DeviceType.IS_IPHONE_5 {
+            backgroundImage.image = UIImage(named: "iphone_5")
+        } else if DeviceType.IS_IPHONE_4_OR_LESS {
+            backgroundImage.image = UIImage(named: "iphone_4")
         }
+        
+        backgroundImage.contentMode =  UIViewContentMode.scaleAspectFill
+        self.view.insertSubview(backgroundImage, at: 0)
     }
+    
     
     enum UIUserInterfaceIdiom : Int
     {

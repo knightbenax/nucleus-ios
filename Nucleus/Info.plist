@@ -39,5 +39,16 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Cabin-Bold-TTF.ttf</string>
+		<string>Cabin-BoldItalic-TTF.ttf</string>
+		<string>Cabin-Italic-TTF.ttf</string>
+		<string>Cabin-Medium-TTF.ttf</string>
+		<string>Cabin-MediumItalic-TTF.ttf</string>
+		<string>Cabin-Regular-TTF.ttf</string>
+		<string>Cabin-SemiBold-TTF.ttf</string>
+		<string>Cabin-SemiBoldItalic-TTF.ttf</string>
+	</array>
 </dict>
 </plist>

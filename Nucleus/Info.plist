@@ -30,6 +30,7 @@
 		<string>Cabin-Regular-TTF.ttf</string>
 		<string>Cabin-SemiBold-TTF.ttf</string>
 		<string>Cabin-SemiBoldItalic-TTF.ttf</string>
+		<string>fontawesome-webfont.ttf</string>
 	</array>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>

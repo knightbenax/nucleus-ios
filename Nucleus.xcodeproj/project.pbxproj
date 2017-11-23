@@ -25,6 +25,7 @@
 		EF8B806B1FA32F7800A4924E /* NucleusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B806A1FA32F7800A4924E /* NucleusUITests.swift */; };
 		EF8B80791FA34BE700A4924E /* CustomUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B80781FA34BE700A4924E /* CustomUIView.swift */; };
 		EF8B807B1FA3925700A4924E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B807A1FA3925700A4924E /* LoginController.swift */; };
+		EFF585A81FC7715C001BC20C /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EFF585A71FC7715C001BC20C /* fontawesome-webfont.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		EF8B806C1FA32F7800A4924E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF8B80781FA34BE700A4924E /* CustomUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIView.swift; sourceTree = "<group>"; };
 		EF8B807A1FA3925700A4924E /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		EFF585A71FC7715C001BC20C /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				EF59C07D1FA3A9070011D283 /* Cabin-Regular-TTF.ttf */,
 				EF59C0821FA3A9070011D283 /* Cabin-SemiBold-TTF.ttf */,
 				EF59C0831FA3A9080011D283 /* Cabin-SemiBoldItalic-TTF.ttf */,
+				EFF585A71FC7715C001BC20C /* fontawesome-webfont.ttf */,
 			);
 			sourceTree = "<group>";
 		};
@@ -274,6 +277,7 @@
 				EF59C0891FA3A9080011D283 /* Cabin-BoldItalic-TTF.ttf in Resources */,
 				EF59C0881FA3A9080011D283 /* Cabin-Bold-TTF.ttf in Resources */,
 				EF59C0841FA3A9080011D283 /* Cabin-Medium-TTF.ttf in Resources */,
+				EFF585A81FC7715C001BC20C /* fontawesome-webfont.ttf in Resources */,
 				EF8B804D1FA32F7800A4924E /* Main.storyboard in Resources */,
 				EF59C0871FA3A9080011D283 /* Cabin-Italic-TTF.ttf in Resources */,
 			);

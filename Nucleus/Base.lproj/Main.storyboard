@@ -18,6 +18,9 @@
         <array key="Cabin-Regular-TTF.ttf">
             <string>Cabin-Regular</string>
         </array>
+        <array key="Cabin-SemiBold-TTF.ttf">
+            <string>Cabin-SemiBold</string>
+        </array>
         <array key="fontawesome-webfont.ttf">
             <string>FontAwesome</string>
         </array>
@@ -121,47 +124,175 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZFZ-vt-mtq">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNo-NZ-coZ">
-                                                <rect key="frame" x="14" y="34" width="30" height="34"/>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNo-NZ-coZ">
+                                                <rect key="frame" x="14" y="42" width="30" height="38"/>
                                                 <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="22"/>
                                                 <state key="normal" title="">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBy-Aw-b6S">
-                                                <rect key="frame" x="156" y="38" width="63" height="27"/>
-                                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="18"/>
+                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iui-wf-Fwr">
+                                                <rect key="frame" x="0.0" y="133" width="375" height="534"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JxU-YH-May">
+                                                        <rect key="frame" x="-2" y="0.0" width="379" height="606"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fullname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CW6-UI-cjN">
+                                                                <rect key="frame" x="20" y="20" width="73.5" height="21"/>
+                                                                <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="18"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your firstname + surname" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ka5-Xm-MK4" customClass="CustomEditText" customModule="Nucleus" customModuleProvider="target">
+                                                                <rect key="frame" x="20" y="46" width="339" height="35"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="35" id="Aa3-dw-haP"/>
+                                                                </constraints>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="18"/>
+                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="yes" keyboardAppearance="alert" returnKeyType="next"/>
+                                                            </textField>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9LQ-Hg-9Qi">
+                                                                <rect key="frame" x="20" y="121" width="60" height="21"/>
+                                                                <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="18"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Male Or Female. Obviously" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pYL-mo-R8o">
+                                                                <rect key="frame" x="20" y="147" width="339" height="35"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="35" id="NL0-yI-wgM"/>
+                                                                </constraints>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="18"/>
+                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="yes" keyboardAppearance="alert" returnKeyType="next"/>
+                                                            </textField>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12O-rF-NNv">
+                                                                <rect key="frame" x="20" y="222" width="122" height="21"/>
+                                                                <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="18"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="MTN, Airtel, Glo, Thuraya, it doesn't matter. As long as it works" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bbX-2u-Gh9">
+                                                                <rect key="frame" x="20" y="248" width="339" height="35"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="35" id="jO2-Vp-XMY"/>
+                                                                </constraints>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="18"/>
+                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="yes" keyboardAppearance="alert" returnKeyType="next"/>
+                                                            </textField>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRI-sk-VPy">
+                                                                <rect key="frame" x="20" y="323" width="116" height="21"/>
+                                                                <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="18"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Where we are sending your IV. No spam, we promise" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="218-XX-xyS">
+                                                                <rect key="frame" x="20" y="349" width="339" height="35"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="35" id="RlB-R9-Q7w"/>
+                                                                </constraints>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="18"/>
+                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="yes" keyboardAppearance="alert" returnKeyType="next"/>
+                                                            </textField>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How did you hear about Camp Joseph?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVQ-JI-JBH">
+                                                                <rect key="frame" x="20" y="424" width="322" height="21"/>
+                                                                <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="18"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tell us. We love a good gist" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W47-pT-lQ4">
+                                                                <rect key="frame" x="20" y="450" width="339" height="35"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="35" id="NMO-XP-5xq"/>
+                                                                </constraints>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="18"/>
+                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="yes" keyboardAppearance="alert" returnKeyType="next"/>
+                                                            </textField>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Career" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwd-Mj-god">
+                                                                <rect key="frame" x="20" y="525" width="54" height="21"/>
+                                                                <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="18"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Student? Graduate? Engineer? Creative? Or Batman? Say it" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42l-U4-62Q">
+                                                                <rect key="frame" x="20" y="551" width="339" height="35"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="35" id="4dz-Jv-I9g"/>
+                                                                </constraints>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="18"/>
+                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="yes" keyboardAppearance="alert" returnKeyType="next"/>
+                                                            </textField>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="42l-U4-62Q" firstAttribute="top" secondItem="cwd-Mj-god" secondAttribute="bottom" constant="5" id="1SU-nr-tK0"/>
+                                                            <constraint firstItem="12O-rF-NNv" firstAttribute="leading" secondItem="bbX-2u-Gh9" secondAttribute="leading" id="29d-hS-pNj"/>
+                                                            <constraint firstItem="cwd-Mj-god" firstAttribute="leading" secondItem="42l-U4-62Q" secondAttribute="leading" id="3E5-5w-mdJ"/>
+                                                            <constraint firstItem="iRI-sk-VPy" firstAttribute="leading" secondItem="218-XX-xyS" secondAttribute="leading" id="3Xn-t8-xvO"/>
+                                                            <constraint firstItem="jVQ-JI-JBH" firstAttribute="leading" secondItem="JxU-YH-May" secondAttribute="leading" constant="20" id="4Vj-Xq-Ujt"/>
+                                                            <constraint firstItem="CW6-UI-cjN" firstAttribute="leading" secondItem="JxU-YH-May" secondAttribute="leading" constant="20" id="4uP-DU-8kg"/>
+                                                            <constraint firstAttribute="bottom" secondItem="42l-U4-62Q" secondAttribute="bottom" constant="20" id="5kw-5F-nKi"/>
+                                                            <constraint firstItem="12O-rF-NNv" firstAttribute="leading" secondItem="JxU-YH-May" secondAttribute="leading" constant="20" id="7gI-SX-tXz"/>
+                                                            <constraint firstItem="ka5-Xm-MK4" firstAttribute="centerX" secondItem="JxU-YH-May" secondAttribute="centerX" id="7x6-uD-z8e"/>
+                                                            <constraint firstItem="cwd-Mj-god" firstAttribute="top" secondItem="W47-pT-lQ4" secondAttribute="bottom" constant="40" id="9UJ-u2-pGE"/>
+                                                            <constraint firstAttribute="trailing" secondItem="42l-U4-62Q" secondAttribute="trailing" constant="20" id="9ia-AR-1Jy"/>
+                                                            <constraint firstItem="cwd-Mj-god" firstAttribute="leading" secondItem="JxU-YH-May" secondAttribute="leading" constant="20" id="AeN-2O-ALd"/>
+                                                            <constraint firstItem="218-XX-xyS" firstAttribute="top" secondItem="iRI-sk-VPy" secondAttribute="bottom" constant="5" id="GT4-df-xQz"/>
+                                                            <constraint firstItem="iRI-sk-VPy" firstAttribute="leading" secondItem="JxU-YH-May" secondAttribute="leading" constant="20" id="Izp-bE-dXP"/>
+                                                            <constraint firstAttribute="trailing" secondItem="ka5-Xm-MK4" secondAttribute="trailing" constant="20" id="J5j-ux-TOb"/>
+                                                            <constraint firstItem="jVQ-JI-JBH" firstAttribute="leading" secondItem="W47-pT-lQ4" secondAttribute="leading" id="JTj-YL-wtW"/>
+                                                            <constraint firstAttribute="trailing" secondItem="W47-pT-lQ4" secondAttribute="trailing" constant="20" id="KSR-qv-b2Z"/>
+                                                            <constraint firstItem="ka5-Xm-MK4" firstAttribute="top" secondItem="CW6-UI-cjN" secondAttribute="bottom" constant="5" id="LQP-Xl-7Ch"/>
+                                                            <constraint firstItem="W47-pT-lQ4" firstAttribute="top" secondItem="jVQ-JI-JBH" secondAttribute="bottom" constant="5" id="NEf-A4-KhO"/>
+                                                            <constraint firstItem="W47-pT-lQ4" firstAttribute="top" secondItem="jVQ-JI-JBH" secondAttribute="bottom" constant="5" id="Tiq-Jo-ryh"/>
+                                                            <constraint firstItem="42l-U4-62Q" firstAttribute="top" secondItem="cwd-Mj-god" secondAttribute="bottom" constant="5" id="Wlx-kD-6oq"/>
+                                                            <constraint firstItem="42l-U4-62Q" firstAttribute="top" secondItem="cwd-Mj-god" secondAttribute="bottom" constant="5" id="Xfg-NB-dL5"/>
+                                                            <constraint firstAttribute="trailing" secondItem="pYL-mo-R8o" secondAttribute="trailing" constant="20" id="bTC-qM-9cJ"/>
+                                                            <constraint firstItem="jVQ-JI-JBH" firstAttribute="top" secondItem="218-XX-xyS" secondAttribute="bottom" constant="40" id="bWp-ZQ-Zcu"/>
+                                                            <constraint firstItem="9LQ-Hg-9Qi" firstAttribute="leading" secondItem="pYL-mo-R8o" secondAttribute="leading" id="cpS-w7-XEc"/>
+                                                            <constraint firstItem="iRI-sk-VPy" firstAttribute="top" secondItem="bbX-2u-Gh9" secondAttribute="bottom" constant="40" id="djS-EL-MtW"/>
+                                                            <constraint firstItem="9LQ-Hg-9Qi" firstAttribute="leading" secondItem="JxU-YH-May" secondAttribute="leading" constant="20" id="fla-SV-Psw"/>
+                                                            <constraint firstItem="12O-rF-NNv" firstAttribute="top" secondItem="pYL-mo-R8o" secondAttribute="bottom" constant="40" id="g8J-9N-pZ0"/>
+                                                            <constraint firstAttribute="trailing" secondItem="bbX-2u-Gh9" secondAttribute="trailing" constant="20" id="gmL-99-A0U"/>
+                                                            <constraint firstItem="pYL-mo-R8o" firstAttribute="top" secondItem="9LQ-Hg-9Qi" secondAttribute="bottom" constant="5" id="i0D-5G-6l6"/>
+                                                            <constraint firstItem="ka5-Xm-MK4" firstAttribute="leading" secondItem="JxU-YH-May" secondAttribute="leading" constant="20" id="lKW-0H-SIj"/>
+                                                            <constraint firstItem="9LQ-Hg-9Qi" firstAttribute="top" secondItem="ka5-Xm-MK4" secondAttribute="bottom" constant="40" id="mAo-5P-kJB"/>
+                                                            <constraint firstAttribute="trailing" secondItem="218-XX-xyS" secondAttribute="trailing" constant="20" id="t09-lZ-QfX"/>
+                                                            <constraint firstItem="CW6-UI-cjN" firstAttribute="top" secondItem="JxU-YH-May" secondAttribute="top" constant="20" id="tpJ-lu-1Od"/>
+                                                            <constraint firstItem="pYL-mo-R8o" firstAttribute="leading" secondItem="JxU-YH-May" secondAttribute="leading" constant="20" id="uJu-pv-Fcf"/>
+                                                            <constraint firstItem="bbX-2u-Gh9" firstAttribute="top" secondItem="12O-rF-NNv" secondAttribute="bottom" constant="5" id="waQ-1m-2Zm"/>
+                                                            <constraint firstItem="CW6-UI-cjN" firstAttribute="leading" secondItem="ka5-Xm-MK4" secondAttribute="leading" id="xI8-ce-lMA"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="JxU-YH-May" firstAttribute="leading" secondItem="iui-wf-Fwr" secondAttribute="leading" constant="-2" id="6wN-dc-Shb"/>
+                                                    <constraint firstItem="JxU-YH-May" firstAttribute="top" secondItem="iui-wf-Fwr" secondAttribute="top" id="745-rL-Ht9"/>
+                                                    <constraint firstAttribute="trailing" secondItem="JxU-YH-May" secondAttribute="trailing" constant="-2" id="7tY-cF-Hay"/>
+                                                    <constraint firstItem="JxU-YH-May" firstAttribute="centerX" secondItem="iui-wf-Fwr" secondAttribute="centerX" id="Ccb-cI-BxU"/>
+                                                    <constraint firstAttribute="bottom" secondItem="JxU-YH-May" secondAttribute="bottom" constant="-25" id="YrU-MT-kga"/>
+                                                </constraints>
+                                            </scrollView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Register" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBy-Aw-b6S">
+                                                <rect key="frame" x="18" y="93" width="89" height="28"/>
+                                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="26"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iui-wf-Fwr">
-                                                <rect key="frame" x="0.0" y="86" width="375" height="581"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Fullname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CW6-UI-cjN">
-                                                        <rect key="frame" x="14" y="20" width="97" height="20"/>
-                                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="16"/>
-                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="CW6-UI-cjN" firstAttribute="top" secondItem="iui-wf-Fwr" secondAttribute="top" constant="20" id="MwQ-56-P7d"/>
-                                                    <constraint firstItem="CW6-UI-cjN" firstAttribute="leading" secondItem="iui-wf-Fwr" secondAttribute="leading" constant="14" id="XbN-hN-c6P"/>
-                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CW6-UI-cjN" secondAttribute="trailing" constant="20" symbolic="YES" id="tUC-5C-0M8"/>
-                                                </constraints>
-                                            </scrollView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="VNo-NZ-coZ" firstAttribute="top" secondItem="ZFZ-vt-mtq" secondAttribute="top" constant="34" id="BYB-QK-Yux"/>
-                                            <constraint firstItem="iui-wf-Fwr" firstAttribute="top" secondItem="VNo-NZ-coZ" secondAttribute="bottom" constant="18" id="KLp-Qy-236"/>
+                                            <constraint firstItem="VNo-NZ-coZ" firstAttribute="top" secondItem="ZFZ-vt-mtq" secondAttribute="top" constant="35" id="BYB-QK-Yux"/>
+                                            <constraint firstItem="iui-wf-Fwr" firstAttribute="top" secondItem="VNo-NZ-coZ" secondAttribute="bottom" constant="60" id="KLp-Qy-236"/>
+                                            <constraint firstItem="kBy-Aw-b6S" firstAttribute="leading" secondItem="ZFZ-vt-mtq" secondAttribute="leading" constant="18" id="Ktb-bc-4xU"/>
                                             <constraint firstItem="iui-wf-Fwr" firstAttribute="leading" secondItem="ZFZ-vt-mtq" secondAttribute="leading" id="SPS-o6-qs6"/>
-                                            <constraint firstItem="VNo-NZ-coZ" firstAttribute="centerY" secondItem="kBy-Aw-b6S" secondAttribute="centerY" id="SuK-Vn-hgJ"/>
-                                            <constraint firstItem="kBy-Aw-b6S" firstAttribute="centerX" secondItem="ZFZ-vt-mtq" secondAttribute="centerX" id="dlS-I0-FEa"/>
                                             <constraint firstAttribute="bottom" secondItem="iui-wf-Fwr" secondAttribute="bottom" id="f0s-v1-pDl"/>
+                                            <constraint firstItem="kBy-Aw-b6S" firstAttribute="top" secondItem="VNo-NZ-coZ" secondAttribute="bottom" constant="13" id="j1I-Jh-Dnh"/>
                                             <constraint firstItem="VNo-NZ-coZ" firstAttribute="leading" secondItem="ZFZ-vt-mtq" secondAttribute="leading" constant="14" id="k9Z-Ze-MpJ"/>
                                             <constraint firstAttribute="trailing" secondItem="iui-wf-Fwr" secondAttribute="trailing" id="nnp-rL-Sd4"/>
-                                            <constraint firstItem="kBy-Aw-b6S" firstAttribute="top" secondItem="ZFZ-vt-mtq" secondAttribute="top" constant="38" id="qsW-IW-PIZ"/>
                                         </constraints>
                                     </view>
                                 </subviews>

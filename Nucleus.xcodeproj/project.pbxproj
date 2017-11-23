@@ -26,6 +26,7 @@
 		EF8B80791FA34BE700A4924E /* CustomUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B80781FA34BE700A4924E /* CustomUIView.swift */; };
 		EF8B807B1FA3925700A4924E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B807A1FA3925700A4924E /* LoginController.swift */; };
 		EFF585A81FC7715C001BC20C /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EFF585A71FC7715C001BC20C /* fontawesome-webfont.ttf */; };
+		EFF585AA1FC775D1001BC20C /* CustomEditText.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF585A91FC775D1001BC20C /* CustomEditText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		EF8B80781FA34BE700A4924E /* CustomUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIView.swift; sourceTree = "<group>"; };
 		EF8B807A1FA3925700A4924E /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		EFF585A71FC7715C001BC20C /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
+		EFF585A91FC775D1001BC20C /* CustomEditText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEditText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				EF8B804E1FA32F7800A4924E /* Nucleus.xcdatamodeld */,
 				EF8B80781FA34BE700A4924E /* CustomUIView.swift */,
 				EF8B807A1FA3925700A4924E /* LoginController.swift */,
+				EFF585A91FC775D1001BC20C /* CustomEditText.swift */,
 			);
 			path = Nucleus;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF8B80501FA32F7800A4924E /* Nucleus.xcdatamodeld in Sources */,
+				EFF585AA1FC775D1001BC20C /* CustomEditText.swift in Sources */,
 				EF8B80791FA34BE700A4924E /* CustomUIView.swift in Sources */,
 				EF8B804A1FA32F7800A4924E /* ProfileController.swift in Sources */,
 				EF8B80481FA32F7800A4924E /* AppDelegate.swift in Sources */,

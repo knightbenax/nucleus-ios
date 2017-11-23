@@ -134,21 +134,34 @@
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iui-wf-Fwr">
+                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iui-wf-Fwr">
                                                 <rect key="frame" x="0.0" y="86" width="375" height="581"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Fullname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CW6-UI-cjN">
+                                                        <rect key="frame" x="14" y="20" width="97" height="20"/>
+                                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="16"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="CW6-UI-cjN" firstAttribute="top" secondItem="iui-wf-Fwr" secondAttribute="top" constant="20" id="MwQ-56-P7d"/>
+                                                    <constraint firstItem="CW6-UI-cjN" firstAttribute="leading" secondItem="iui-wf-Fwr" secondAttribute="leading" constant="14" id="XbN-hN-c6P"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CW6-UI-cjN" secondAttribute="trailing" constant="20" symbolic="YES" id="tUC-5C-0M8"/>
+                                                </constraints>
                                             </scrollView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstItem="VNo-NZ-coZ" firstAttribute="top" secondItem="ZFZ-vt-mtq" secondAttribute="top" constant="34" id="BYB-QK-Yux"/>
+                                            <constraint firstItem="iui-wf-Fwr" firstAttribute="top" secondItem="VNo-NZ-coZ" secondAttribute="bottom" constant="18" id="KLp-Qy-236"/>
                                             <constraint firstItem="iui-wf-Fwr" firstAttribute="leading" secondItem="ZFZ-vt-mtq" secondAttribute="leading" id="SPS-o6-qs6"/>
-                                            <constraint firstItem="iui-wf-Fwr" firstAttribute="top" secondItem="VNo-NZ-coZ" secondAttribute="bottom" constant="18" id="c0q-ds-C3k"/>
+                                            <constraint firstItem="VNo-NZ-coZ" firstAttribute="centerY" secondItem="kBy-Aw-b6S" secondAttribute="centerY" id="SuK-Vn-hgJ"/>
                                             <constraint firstItem="kBy-Aw-b6S" firstAttribute="centerX" secondItem="ZFZ-vt-mtq" secondAttribute="centerX" id="dlS-I0-FEa"/>
                                             <constraint firstAttribute="bottom" secondItem="iui-wf-Fwr" secondAttribute="bottom" id="f0s-v1-pDl"/>
-                                            <constraint firstItem="VNo-NZ-coZ" firstAttribute="top" secondItem="ZFZ-vt-mtq" secondAttribute="top" constant="34" id="fyv-xZ-Fm4"/>
+                                            <constraint firstItem="VNo-NZ-coZ" firstAttribute="leading" secondItem="ZFZ-vt-mtq" secondAttribute="leading" constant="14" id="k9Z-Ze-MpJ"/>
                                             <constraint firstAttribute="trailing" secondItem="iui-wf-Fwr" secondAttribute="trailing" id="nnp-rL-Sd4"/>
-                                            <constraint firstItem="kBy-Aw-b6S" firstAttribute="centerY" secondItem="VNo-NZ-coZ" secondAttribute="centerY" id="oUZ-Fg-VBL"/>
                                             <constraint firstItem="kBy-Aw-b6S" firstAttribute="top" secondItem="ZFZ-vt-mtq" secondAttribute="top" constant="38" id="qsW-IW-PIZ"/>
-                                            <constraint firstItem="VNo-NZ-coZ" firstAttribute="leading" secondItem="ZFZ-vt-mtq" secondAttribute="leading" constant="14" id="tnq-zp-0Zm"/>
                                         </constraints>
                                     </view>
                                 </subviews>

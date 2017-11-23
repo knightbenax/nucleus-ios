@@ -124,27 +124,21 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZFZ-vt-mtq">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNo-NZ-coZ">
-                                                <rect key="frame" x="14" y="34" width="30" height="38"/>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNo-NZ-coZ">
+                                                <rect key="frame" x="14" y="42" width="30" height="38"/>
                                                 <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="22"/>
                                                 <state key="normal" title="">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBy-Aw-b6S">
-                                                <rect key="frame" x="150" y="38" width="75" height="31"/>
-                                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="20"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iui-wf-Fwr">
-                                                <rect key="frame" x="0.0" y="90" width="375" height="577"/>
+                                                <rect key="frame" x="0.0" y="133" width="375" height="534"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JxU-YH-May">
                                                         <rect key="frame" x="-2" y="0.0" width="379" height="606"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fullname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CW6-UI-cjN">
-                                                                <rect key="frame" x="20" y="20" width="64" height="21"/>
+                                                                <rect key="frame" x="20" y="20" width="73.5" height="21"/>
                                                                 <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="18"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -234,7 +228,6 @@
                                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="yes" keyboardAppearance="alert" returnKeyType="next"/>
                                                             </textField>
                                                         </subviews>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstItem="42l-U4-62Q" firstAttribute="top" secondItem="cwd-Mj-god" secondAttribute="bottom" constant="5" id="1SU-nr-tK0"/>
                                                             <constraint firstItem="12O-rF-NNv" firstAttribute="leading" secondItem="bbX-2u-Gh9" secondAttribute="leading" id="29d-hS-pNj"/>
@@ -273,7 +266,6 @@
                                                             <constraint firstItem="pYL-mo-R8o" firstAttribute="leading" secondItem="JxU-YH-May" secondAttribute="leading" constant="20" id="uJu-pv-Fcf"/>
                                                             <constraint firstItem="bbX-2u-Gh9" firstAttribute="top" secondItem="12O-rF-NNv" secondAttribute="bottom" constant="5" id="waQ-1m-2Zm"/>
                                                             <constraint firstItem="CW6-UI-cjN" firstAttribute="leading" secondItem="ka5-Xm-MK4" secondAttribute="leading" id="xI8-ce-lMA"/>
-                                                            <constraint firstAttribute="trailing" secondItem="CW6-UI-cjN" secondAttribute="trailing" constant="295" id="xRi-ZT-JXq"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
@@ -285,18 +277,22 @@
                                                     <constraint firstAttribute="bottom" secondItem="JxU-YH-May" secondAttribute="bottom" constant="-25" id="YrU-MT-kga"/>
                                                 </constraints>
                                             </scrollView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Register" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBy-Aw-b6S">
+                                                <rect key="frame" x="18" y="93" width="89" height="28"/>
+                                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="26"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="VNo-NZ-coZ" firstAttribute="top" secondItem="ZFZ-vt-mtq" secondAttribute="top" constant="34" id="BYB-QK-Yux"/>
-                                            <constraint firstItem="iui-wf-Fwr" firstAttribute="top" secondItem="VNo-NZ-coZ" secondAttribute="bottom" constant="18" id="KLp-Qy-236"/>
+                                            <constraint firstItem="VNo-NZ-coZ" firstAttribute="top" secondItem="ZFZ-vt-mtq" secondAttribute="top" constant="35" id="BYB-QK-Yux"/>
+                                            <constraint firstItem="iui-wf-Fwr" firstAttribute="top" secondItem="VNo-NZ-coZ" secondAttribute="bottom" constant="60" id="KLp-Qy-236"/>
+                                            <constraint firstItem="kBy-Aw-b6S" firstAttribute="leading" secondItem="ZFZ-vt-mtq" secondAttribute="leading" constant="18" id="Ktb-bc-4xU"/>
                                             <constraint firstItem="iui-wf-Fwr" firstAttribute="leading" secondItem="ZFZ-vt-mtq" secondAttribute="leading" id="SPS-o6-qs6"/>
-                                            <constraint firstItem="VNo-NZ-coZ" firstAttribute="centerY" secondItem="kBy-Aw-b6S" secondAttribute="centerY" id="SuK-Vn-hgJ"/>
-                                            <constraint firstItem="kBy-Aw-b6S" firstAttribute="centerX" secondItem="ZFZ-vt-mtq" secondAttribute="centerX" id="dlS-I0-FEa"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="VNo-NZ-coZ" secondAttribute="trailing" constant="20" symbolic="YES" id="eAS-al-fwd"/>
                                             <constraint firstAttribute="bottom" secondItem="iui-wf-Fwr" secondAttribute="bottom" id="f0s-v1-pDl"/>
+                                            <constraint firstItem="kBy-Aw-b6S" firstAttribute="top" secondItem="VNo-NZ-coZ" secondAttribute="bottom" constant="13" id="j1I-Jh-Dnh"/>
                                             <constraint firstItem="VNo-NZ-coZ" firstAttribute="leading" secondItem="ZFZ-vt-mtq" secondAttribute="leading" constant="14" id="k9Z-Ze-MpJ"/>
                                             <constraint firstAttribute="trailing" secondItem="iui-wf-Fwr" secondAttribute="trailing" id="nnp-rL-Sd4"/>
-                                            <constraint firstItem="kBy-Aw-b6S" firstAttribute="top" secondItem="ZFZ-vt-mtq" secondAttribute="top" constant="38" id="qsW-IW-PIZ"/>
                                         </constraints>
                                     </view>
                                 </subviews>

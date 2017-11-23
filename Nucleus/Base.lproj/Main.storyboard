@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Z7I-n6-z9o">
-    <device id="retina5_5" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Z7I-n6-z9o">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,11 +25,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ProfileController" customModule="Nucleus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="frn-cv-NZK" customClass="CustomUIView" customModule="Nucleus" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.2901960784" green="0.40784313729999999" blue="0.74117647060000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
@@ -55,22 +55,35 @@
             <objects>
                 <viewController id="Z7I-n6-z9o" customClass="LoginController" customModule="Nucleus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YCP-ZZ-g8o">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bbV-KO-BWW">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U0g-Iw-yar">
-                                        <rect key="frame" x="47.666666666666657" y="218.66666666666663" width="320" height="300"/>
+                                        <rect key="frame" x="28" y="157" width="320" height="337"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="683-KO-EOb">
-                                                <rect key="frame" x="20" y="239" width="280" height="50"/>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="683-KO-EOb">
+                                                <rect key="frame" x="20" y="289" width="280" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="18"/>
-                                                <state key="normal" title="Register">
-                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Registered? ">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.25035691624365486" green="0.25035691624365486" blue="0.25035691624365486" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="18" name="Cabin-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="Sign In">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.25035691624365486" green="0.25035691624365486" blue="0.25035691624365486" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="18" name="Cabin-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
                                                 </state>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nucleus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtm-02-uDq">
@@ -87,17 +100,39 @@
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJl-D8-gz7">
+                                                <rect key="frame" x="20" y="230" width="280" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="18"/>
+                                                <state key="normal" title="Register">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="300" id="mcj-hk-2wC"/>
+                                            <constraint firstAttribute="height" constant="337" id="mcj-hk-2wC"/>
                                             <constraint firstAttribute="width" constant="320" id="tpO-Bk-TCd"/>
                                         </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZFZ-vt-mtq">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="U0g-Iw-yar" firstAttribute="centerX" secondItem="bbV-KO-BWW" secondAttribute="centerX" id="AHp-lC-CTJ"/>
-                                    <constraint firstItem="U0g-Iw-yar" firstAttribute="centerY" secondItem="bbV-KO-BWW" secondAttribute="centerY" id="rog-os-KsA"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZFZ-vt-mtq" secondAttribute="trailing" id="PnR-0I-3Nk"/>
+                                    <constraint firstItem="ZFZ-vt-mtq" firstAttribute="top" secondItem="bbV-KO-BWW" secondAttribute="top" id="Tzq-KZ-wzb"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZFZ-vt-mtq" secondAttribute="bottom" id="Ujv-J6-pwx"/>
+                                    <constraint firstItem="U0g-Iw-yar" firstAttribute="centerY" secondItem="bbV-KO-BWW" secondAttribute="centerY" constant="-8" id="rog-os-KsA"/>
+                                    <constraint firstItem="ZFZ-vt-mtq" firstAttribute="leading" secondItem="bbV-KO-BWW" secondAttribute="leading" id="t3r-5K-0uw"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="U0g-Iw-yar"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -116,7 +151,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zfm-8z-4HG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="992.75362318840587" y="132.88043478260872"/>
+            <point key="canvasLocation" x="991.20000000000005" y="132.68365817091455"/>
         </scene>
     </scenes>
 </document>

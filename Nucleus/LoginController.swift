@@ -15,8 +15,10 @@ class LoginController: UIViewController {
     @IBOutlet weak var registerBtn: UIButton!
     
     @IBAction func registerClick(_ sender: Any) {
+        
         startPanel.isHidden = true
         registerPanel.isHidden = false
+        //self.view.endEditing(true)
     }
     
     @IBOutlet weak var regSubmitButton: UIButton!
@@ -28,6 +30,7 @@ class LoginController: UIViewController {
     @IBAction func regBackBtnClick(_ sender: Any) {
         startPanel.isHidden = false
         registerPanel.isHidden = true
+        self.view.endEditing(true)
     }
     
     override func viewDidLoad() {
@@ -36,6 +39,12 @@ class LoginController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         setBg()
         setButtons()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        self.view.endEditing(true)
+        
     }
     
     func setButtons(){

@@ -14,6 +14,14 @@ class LoginController: UIViewController {
     
     @IBOutlet weak var registerBtn: UIButton!
     
+    @IBAction func registerClick(_ sender: Any) {
+        
+    }
+    
+    @IBOutlet weak var registerPanel: UIView!
+    
+    @IBOutlet weak var startPanel: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

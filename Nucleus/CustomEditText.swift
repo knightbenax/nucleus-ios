@@ -13,8 +13,9 @@ class CustomEditText: UITextField {
     
     override func layoutSubviews() {
         // resize your layers based on the view's new frame
-        gradientLayer.frame = self.bounds;
-        
+        super.layoutSubviews()
+        //gradientLayer.frame = self.bounds;
+        self.attributedPlaceholder = NSAttributedString(string: self.placeholder!, attributes: [NSAttributedStringKey.foregroundColor: UIColor.darkGray])
         
         let border = CALayer()
         let width = CGFloat(1.0)
@@ -25,11 +26,7 @@ class CustomEditText: UITextField {
         self.layer.addSublayer(border)
         self.layer.masksToBounds = true
         
-        self.attributedPlaceholder = NSAttributedString(string: "placeholder text", attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
+  
     }
-    
-    override func awakeFromNib() {
-       
-    }
-    
+
 }

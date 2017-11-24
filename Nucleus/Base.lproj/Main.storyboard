@@ -69,7 +69,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U0g-Iw-yar">
-                                        <rect key="frame" x="28" y="157" width="320" height="337"/>
+                                        <rect key="frame" x="28" y="229.66666666666663" width="320" height="337"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="683-KO-EOb">
                                                 <rect key="frame" x="20" y="289" width="280" height="44"/>
@@ -134,6 +134,9 @@
                                                 <state key="normal" title="">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="regBackBtnClick:" destination="Z7I-n6-z9o" eventType="touchUpInside" id="Uaw-KH-qJu"/>
+                                                </connections>
                                             </button>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iui-wf-Fwr">
                                                 <rect key="frame" x="0.0" y="137" width="375" height="612"/>
@@ -324,11 +327,6 @@
                                     <constraint firstItem="U0g-Iw-yar" firstAttribute="centerY" secondItem="bbV-KO-BWW" secondAttribute="centerY" constant="-8" id="rog-os-KsA"/>
                                     <constraint firstItem="ZFZ-vt-mtq" firstAttribute="leading" secondItem="bbV-KO-BWW" secondAttribute="leading" id="t3r-5K-0uw"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="U0g-Iw-yar"/>
-                                    </mask>
-                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -342,6 +340,7 @@
                     </view>
                     <connections>
                         <outlet property="mainView" destination="bbV-KO-BWW" id="YNB-d3-k4X"/>
+                        <outlet property="regSubmitButton" destination="DXn-Rm-GFx" id="0QA-LT-Uba"/>
                         <outlet property="registerBtn" destination="683-KO-EOb" id="45v-MY-L89"/>
                         <outlet property="registerPanel" destination="ZFZ-vt-mtq" id="cVU-By-UMV"/>
                         <outlet property="startPanel" destination="U0g-Iw-yar" id="jSo-Dh-LMx"/>

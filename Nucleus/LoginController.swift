@@ -16,26 +16,51 @@ class LoginController: UIViewController {
     
     @IBAction func registerClick(_ sender: Any) {
         
+        startPanel.isHidden = true
+        registerPanel.isHidden = false
+        //self.view.endEditing(true)
     }
+    
+    @IBOutlet weak var regSubmitButton: UIButton!
     
     @IBOutlet weak var registerPanel: UIView!
     
     @IBOutlet weak var startPanel: UIView!
+
+    @IBAction func regBackBtnClick(_ sender: Any) {
+        startPanel.isHidden = false
+        registerPanel.isHidden = true
+        self.view.endEditing(true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        registerPanel.isHidden = true
         // Do any additional setup after loading the view, typically from a nib.
         setBg()
-        setButton()
+        setButtons()
     }
     
-    func setButton(){
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        self.view.endEditing(true)
+        
+    }
+    
+    func setButtons(){
         registerBtn.layer.shadowColor = UIColor.black.cgColor
         registerBtn.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
         registerBtn.layer.shadowRadius = 20
         
         registerBtn.layer.shadowOpacity = 0.3
         registerBtn.layer.cornerRadius = 5
+        
+        regSubmitButton.layer.shadowColor = UIColor.black.cgColor
+        regSubmitButton.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        regSubmitButton.layer.shadowRadius = 20
+        
+        regSubmitButton.layer.shadowOpacity = 0.3
+        regSubmitButton.layer.cornerRadius = 5
     }
     
     func setBg(){

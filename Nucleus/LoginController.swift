@@ -12,16 +12,32 @@ class LoginController: UIViewController {
     
     @IBOutlet weak var mainView: UIView!
     
+    @IBOutlet weak var signInPanel: UIView!
     @IBOutlet weak var registerBtn: UIButton!
     
     @IBAction func registerClick(_ sender: Any) {
         
         startPanel.isHidden = true
         registerPanel.isHidden = false
+        signInPanel.isHidden = true
         //self.view.endEditing(true)
     }
     
+    @IBAction func signInClick(_ sender: Any) {
+        startPanel.isHidden = true
+        registerPanel.isHidden = true
+        signInPanel.isHidden = false
+    }
+    
+    @IBAction func signInBackBtnClick(_ sender: Any) {
+        startPanel.isHidden = false
+        signInPanel.isHidden = true
+        registerPanel.isHidden = true
+        self.view.endEditing(true)
+    }
+    
     @IBOutlet weak var regSubmitButton: UIButton!
+    @IBOutlet weak var signInSubmitBtn: UIButton!
     
     @IBOutlet weak var registerPanel: UIView!
     
@@ -29,6 +45,7 @@ class LoginController: UIViewController {
 
     @IBAction func regBackBtnClick(_ sender: Any) {
         startPanel.isHidden = false
+        signInPanel.isHidden = true
         registerPanel.isHidden = true
         self.view.endEditing(true)
     }
@@ -36,6 +53,7 @@ class LoginController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         registerPanel.isHidden = true
+        signInPanel.isHidden = true
         // Do any additional setup after loading the view, typically from a nib.
         setBg()
         setButtons()
@@ -61,6 +79,13 @@ class LoginController: UIViewController {
         
         regSubmitButton.layer.shadowOpacity = 0.3
         regSubmitButton.layer.cornerRadius = 5
+        
+        signInSubmitBtn.layer.shadowColor = UIColor.black.cgColor
+        signInSubmitBtn.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        signInSubmitBtn.layer.shadowRadius = 20
+        
+        signInSubmitBtn.layer.shadowOpacity = 0.3
+        signInSubmitBtn.layer.cornerRadius = 5
     }
     
     func setBg(){

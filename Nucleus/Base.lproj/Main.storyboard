@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Z7I-n6-z9o">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -32,11 +32,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ProfileController" customModule="Nucleus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="frn-cv-NZK" customClass="CustomUIView" customModule="Nucleus" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.2901960784" green="0.40784313729999999" blue="0.74117647060000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
@@ -62,11 +62,11 @@
             <objects>
                 <viewController id="Z7I-n6-z9o" customClass="LoginController" customModule="Nucleus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YCP-ZZ-g8o">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bbV-KO-BWW">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U0g-Iw-yar">
                                         <rect key="frame" x="28" y="229.66666666666663" width="320" height="337"/>
@@ -124,6 +124,34 @@
                                             <constraint firstAttribute="height" constant="337" id="mcj-hk-2wC"/>
                                             <constraint firstAttribute="width" constant="320" id="tpO-Bk-TCd"/>
                                         </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nAU-i8-MYA" userLabel="SignIn Panel">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8W7-9G-3eW">
+                                                <rect key="frame" x="14" y="38" width="30" height="34"/>
+                                                <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="22"/>
+                                                <state key="normal" title="">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="regBackBtnClick:" destination="Z7I-n6-z9o" eventType="touchUpInside" id="tRm-nP-LZr"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZX-mG-JMU">
+                                                <rect key="frame" x="18" y="89" width="76" height="32"/>
+                                                <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="26"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="8W7-9G-3eW" firstAttribute="leading" secondItem="nAU-i8-MYA" secondAttribute="leading" constant="14" id="9As-fg-Ivi"/>
+                                            <constraint firstItem="fZX-mG-JMU" firstAttribute="leading" secondItem="nAU-i8-MYA" secondAttribute="leading" constant="18" id="KJB-XP-L6i"/>
+                                            <constraint firstItem="8W7-9G-3eW" firstAttribute="top" secondItem="nAU-i8-MYA" secondAttribute="top" constant="38" id="VJd-xJ-5bi"/>
+                                            <constraint firstItem="fZX-mG-JMU" firstAttribute="top" secondItem="8W7-9G-3eW" secondAttribute="bottom" constant="17" id="nCA-dc-JAW"/>
+                                        </constraints>
+                                        <viewLayoutGuide key="safeArea" id="QIo-Hr-SZP"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZFZ-vt-mtq">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -321,12 +349,22 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="U0g-Iw-yar" firstAttribute="centerX" secondItem="bbV-KO-BWW" secondAttribute="centerX" id="AHp-lC-CTJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="nAU-i8-MYA" secondAttribute="bottom" id="E5A-EC-hJ4"/>
                                     <constraint firstAttribute="trailing" secondItem="ZFZ-vt-mtq" secondAttribute="trailing" id="PnR-0I-3Nk"/>
                                     <constraint firstItem="ZFZ-vt-mtq" firstAttribute="top" secondItem="bbV-KO-BWW" secondAttribute="top" id="Tzq-KZ-wzb"/>
                                     <constraint firstAttribute="bottom" secondItem="ZFZ-vt-mtq" secondAttribute="bottom" id="Ujv-J6-pwx"/>
+                                    <constraint firstAttribute="trailing" secondItem="nAU-i8-MYA" secondAttribute="trailing" id="Xqg-Bo-xJS"/>
+                                    <constraint firstItem="nAU-i8-MYA" firstAttribute="top" secondItem="bbV-KO-BWW" secondAttribute="top" id="fes-mH-Ltx"/>
+                                    <constraint firstItem="nAU-i8-MYA" firstAttribute="leading" secondItem="bbV-KO-BWW" secondAttribute="leading" id="kV2-kB-dXp"/>
                                     <constraint firstItem="U0g-Iw-yar" firstAttribute="centerY" secondItem="bbV-KO-BWW" secondAttribute="centerY" constant="-8" id="rog-os-KsA"/>
                                     <constraint firstItem="ZFZ-vt-mtq" firstAttribute="leading" secondItem="bbV-KO-BWW" secondAttribute="leading" id="t3r-5K-0uw"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="U0g-Iw-yar"/>
+                                        <exclude reference="ZFZ-vt-mtq"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

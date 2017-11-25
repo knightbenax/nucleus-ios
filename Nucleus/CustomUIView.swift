@@ -18,7 +18,7 @@ class CustomUIView: UIView {
     
     override func awakeFromNib() {
         gradientLayer.frame = self.bounds
-        let color1 = hexStringToUIColor(hex: "498207").cgColor //UIColor(red: 0.00392157, green: 0.862745, blue: 0.384314, alpha: 1).cgColor
+        let color1 = UIColorFromRGB(color: "498207", alpha: 1).cgColor //UIColor(red: 0.00392157, green: 0.862745, blue: 0.384314, alpha: 1).cgColor
         let color2 = hexStringToUIColor(hex: "FBEA58").cgColor//UIColor(red: 0.0470588, green: 0.486275, blue: 0.839216, alpha: 1).cgColor
         gradientLayer.colors = [color1, color2]
         gradientLayer.locations = [0.0, 1.0]
@@ -35,7 +35,7 @@ class CustomUIView: UIView {
             cString.remove(at: cString.startIndex)
         }
         
-        if ((cString.characters.count) != 6) {
+        if ((cString.count) != 6) {
             return UIColor.gray
         }
         

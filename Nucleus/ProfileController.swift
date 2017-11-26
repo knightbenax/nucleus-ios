@@ -46,6 +46,10 @@ class ProfileController: UIViewController {
         )
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+    }
+    
     
     func UIColorFromRGB(color: String) -> UIColor {
         return UIColorFromRGB(color: color, alpha: 1.0)

@@ -13,19 +13,18 @@ class CustomUIView: UIView {
     
     override func layoutSubviews() {
         // resize your layers based on the view's new frame
-        gradientLayer.frame = self.bounds;
-    }
-    
-    override func awakeFromNib() {
+        super.layoutSubviews()
+        
         gradientLayer.frame = self.bounds
-        let color1 = UIColorFromRGB(color: "498207", alpha: 1).cgColor //UIColor(red: 0.00392157, green: 0.862745, blue: 0.384314, alpha: 1).cgColor
-        let color2 = hexStringToUIColor(hex: "FBEA58").cgColor//UIColor(red: 0.0470588, green: 0.486275, blue: 0.839216, alpha: 1).cgColor
+        let color1 = UIColorFromRGB(color: "003700", alpha: 0.9).cgColor //UIColor(red: 0.00392157, green: 0.862745, blue: 0.384314, alpha: 1).cgColor
+        let color2 = UIColorFromRGB(color: "E9DC00", alpha: 0.9).cgColor//UIColor(red: 0.0470588, green: 0.486275, blue: 0.839216, alpha: 1).cgColor
         gradientLayer.colors = [color1, color2]
-        gradientLayer.locations = [0.0, 1.0]
+        //gradientLayer.locations = [0.0, 1.0]
         gradientLayer.startPoint = CGPoint(x: 1, y: 0)
         gradientLayer.endPoint = CGPoint(x: 0, y: 1)
-        //mainParent.layer.insertSublayer(gradientLayer, at: 0)
-        self.layer.addSublayer(gradientLayer)
+        self.layer.insertSublayer(gradientLayer, at: 0)
+        //self.layer.addSublayer(gradientLayer)
+        
     }
     
     func hexStringToUIColor (hex:String) -> UIColor {

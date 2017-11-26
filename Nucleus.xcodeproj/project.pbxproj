@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF4F2C651FCAB51900EC4268 /* UIImage+AddBlendMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4F2C641FCAB51900EC4268 /* UIImage+AddBlendMode.swift */; };
 		EF59C0841FA3A9080011D283 /* Cabin-Medium-TTF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF59C07C1FA3A9070011D283 /* Cabin-Medium-TTF.ttf */; };
 		EF59C0851FA3A9080011D283 /* Cabin-Regular-TTF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF59C07D1FA3A9070011D283 /* Cabin-Regular-TTF.ttf */; };
 		EF59C0861FA3A9080011D283 /* Cabin-MediumItalic-TTF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF59C07E1FA3A9070011D283 /* Cabin-MediumItalic-TTF.ttf */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF4F2C641FCAB51900EC4268 /* UIImage+AddBlendMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+AddBlendMode.swift"; sourceTree = "<group>"; };
 		EF59C07C1FA3A9070011D283 /* Cabin-Medium-TTF.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-Medium-TTF.ttf"; sourceTree = "<group>"; };
 		EF59C07D1FA3A9070011D283 /* Cabin-Regular-TTF.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-Regular-TTF.ttf"; sourceTree = "<group>"; };
 		EF59C07E1FA3A9070011D283 /* Cabin-MediumItalic-TTF.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-MediumItalic-TTF.ttf"; sourceTree = "<group>"; };
@@ -100,6 +102,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF4F2C631FCAB4F400EC4268 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EF4F2C641FCAB51900EC4268 /* UIImage+AddBlendMode.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		EF8B803B1FA32F7800A4924E = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +142,7 @@
 		EF8B80461FA32F7800A4924E /* Nucleus */ = {
 			isa = PBXGroup;
 			children = (
+				EF4F2C631FCAB4F400EC4268 /* Extensions */,
 				EF8B80471FA32F7800A4924E /* AppDelegate.swift */,
 				EF8B80491FA32F7800A4924E /* ProfileController.swift */,
 				EF8B804B1FA32F7800A4924E /* Main.storyboard */,
@@ -312,6 +323,7 @@
 				EF8B80791FA34BE700A4924E /* CustomUIView.swift in Sources */,
 				EF8B804A1FA32F7800A4924E /* ProfileController.swift in Sources */,
 				EF8B80481FA32F7800A4924E /* AppDelegate.swift in Sources */,
+				EF4F2C651FCAB51900EC4268 /* UIImage+AddBlendMode.swift in Sources */,
 				EF8B807B1FA3925700A4924E /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

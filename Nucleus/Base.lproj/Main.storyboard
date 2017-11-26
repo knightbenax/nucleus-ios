@@ -35,16 +35,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="deinere" translatesAutoresizingMaskIntoConstraints="NO" id="O3Q-54-VWb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="frn-cv-NZK" customClass="CustomUIView" customModule="Nucleus" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" red="0.2901960784" green="0.40784313729999999" blue="0.74117647060000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4f1-9m-CMi">
+                                        <rect key="frame" x="5" y="0.0" width="75" height="667"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ef-UD-ksb">
+                                                <rect key="frame" x="15" y="80" width="45" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="45" id="1zF-cb-GB8"/>
+                                                    <constraint firstAttribute="height" constant="45" id="heN-dy-oVE"/>
+                                                </constraints>
+                                                <state key="normal" image="user_icon"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKu-2Q-X8g">
+                                                <rect key="frame" x="15" y="155" width="45" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="jh3-xQ-0Lz"/>
+                                                    <constraint firstAttribute="width" constant="45" id="sc4-Qr-42H"/>
+                                                </constraints>
+                                                <state key="normal" image="location_empty"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C4R-Iz-c3w">
+                                                <rect key="frame" x="15" y="230" width="45" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="45" id="Q3T-Tf-rX2"/>
+                                                    <constraint firstAttribute="height" constant="45" id="hlN-rE-f8U"/>
+                                                </constraints>
+                                                <state key="normal" image="prog_empty"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="BKu-2Q-X8g" firstAttribute="centerX" secondItem="4f1-9m-CMi" secondAttribute="centerX" id="BXR-p6-aWM"/>
+                                            <constraint firstItem="C4R-Iz-c3w" firstAttribute="centerX" secondItem="4f1-9m-CMi" secondAttribute="centerX" id="Ybf-iH-Uwg"/>
+                                            <constraint firstItem="C4R-Iz-c3w" firstAttribute="top" secondItem="BKu-2Q-X8g" secondAttribute="bottom" constant="30" id="aPt-IE-ecG"/>
+                                            <constraint firstItem="BKu-2Q-X8g" firstAttribute="top" secondItem="3ef-UD-ksb" secondAttribute="bottom" constant="30" id="ccm-hI-6j4"/>
+                                            <constraint firstItem="3ef-UD-ksb" firstAttribute="top" secondItem="4f1-9m-CMi" secondAttribute="top" constant="80" id="ege-R6-EYU"/>
+                                            <constraint firstItem="3ef-UD-ksb" firstAttribute="centerX" secondItem="4f1-9m-CMi" secondAttribute="centerX" id="g30-na-8h6"/>
+                                            <constraint firstAttribute="width" constant="75" id="uEM-15-I2w"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="4f1-9m-CMi" secondAttribute="bottom" id="ClR-h7-8FP"/>
+                                    <constraint firstItem="4f1-9m-CMi" firstAttribute="leading" secondItem="frn-cv-NZK" secondAttribute="leading" constant="5" id="HRz-wX-eCz"/>
+                                    <constraint firstItem="4f1-9m-CMi" firstAttribute="top" secondItem="frn-cv-NZK" secondAttribute="top" id="PtI-W7-beY"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="fA1-LD-KO4"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.20101509340000001" green="0.56076761450000001" blue="0.74117647060000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="O3Q-54-VWb" firstAttribute="trailing" secondItem="6h4-mk-qOo" secondAttribute="trailing" id="69t-6U-FVl"/>
                             <constraint firstItem="frn-cv-NZK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ALR-yX-J3i"/>
+                            <constraint firstItem="O3Q-54-VWb" firstAttribute="bottom" secondItem="6h4-mk-qOo" secondAttribute="bottom" id="OZ3-0t-8FU"/>
                             <constraint firstItem="frn-cv-NZK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WEV-5e-tY1"/>
                             <constraint firstAttribute="trailing" secondItem="frn-cv-NZK" secondAttribute="trailing" id="geE-OM-Qnw"/>
+                            <constraint firstItem="O3Q-54-VWb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ojx-7l-fYd"/>
+                            <constraint firstItem="O3Q-54-VWb" firstAttribute="leading" secondItem="6h4-mk-qOo" secondAttribute="leading" id="pbf-qt-WRU"/>
                             <constraint firstAttribute="bottom" secondItem="frn-cv-NZK" secondAttribute="bottom" id="wvx-N1-abB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6h4-mk-qOo"/>
@@ -435,4 +486,10 @@
             <point key="canvasLocation" x="991.20000000000005" y="131.78410794602701"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="deinere" width="1080" height="1350"/>
+        <image name="location_empty" width="132" height="132"/>
+        <image name="prog_empty" width="132" height="132"/>
+        <image name="user_icon" width="135" height="135"/>
+    </resources>
 </document>

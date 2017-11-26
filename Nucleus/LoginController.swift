@@ -29,6 +29,10 @@ class LoginController: UIViewController {
         signInPanel.isHidden = false
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+    }
+    
     @IBAction func signInBackBtnClick(_ sender: Any) {
         startPanel.isHidden = false
         signInPanel.isHidden = true

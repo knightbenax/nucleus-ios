@@ -12,10 +12,13 @@ class ProfileController: UIViewController {
     
     let gradientLayer = CAGradientLayer()
 
+    @IBOutlet weak var bgImage: UIImageView!
     @IBOutlet weak var mainParent: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        getAndTintImage()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -50,6 +53,18 @@ class ProfileController: UIViewController {
         return UIStatusBarStyle.lightContent
     }
     
+    func getAndTintImage(){
+        let bgImage = UIImage(named: "deinere")
+        
+        let firstColor = hexStringToUIColor(hex: "498207")
+        let secondColor = hexStringToUIColor(hex: "FBEA58")
+        
+        let colorArray = [firstColor.cgColor, secondColor.cgColor]
+        
+        let newBgImage = bgImage?.tintedWithLinearGradientColors(colorsArr: colorArray)
+        
+        self.bgImage.image = newBgImage;
+    }
     
     func UIColorFromRGB(color: String) -> UIColor {
         return UIColorFromRGB(color: color, alpha: 1.0)

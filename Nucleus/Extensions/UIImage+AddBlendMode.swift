@@ -18,7 +18,7 @@ extension UIImage {
         context.translateBy(x: 0, y: self.size.height)
         context.scaleBy(x: 1, y: -1)
         
-        context.setBlendMode(.normal)
+        context.setBlendMode(.colorBurn)
         let rect = CGRect.init(x: 0, y: 0, width: size.width, height: size.height)
         
         // Create gradient

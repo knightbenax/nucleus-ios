@@ -9,11 +9,13 @@
 import UIKit
 import CoreLocation
 import MapKit
+import Mapbox
 
 class VenueController: UIViewController {
     
     var latitude: CLLocationDegrees = 0
     var longitude: CLLocationDegrees = 0
+    @IBOutlet weak var mapView: MGLMapView!
     
     func goToMap(){
         if (UIApplication.shared.canOpenURL(NSURL(string:"comgooglemaps://")! as URL)) {
@@ -34,6 +36,18 @@ class VenueController: UIViewController {
             mapItem.name = "CJ 2017 - Faith Academy, Canaanland, Ota"
             mapItem.openInMaps(launchOptions: options)
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        removeAttr()
+         //AIzaSyArNf1B72BOCukW8C5FI5PgJvMKeMN-KQ0 
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    func removeAttr(){
+        mapView.attributionButton.isHidden = true
     }
     
 }

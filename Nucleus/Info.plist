@@ -51,5 +51,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>MGLMapboxAccessToken</key>
+	<string>pk.eyJ1Ijoia25pZ2h0YmVuYXgiLCJhIjoiY2lnYzQ3ZGZxMmV6MndibTMzb3hhM2syYyJ9.Z86x61Ogi-DVrcNB2URI9w</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Shows directions from you to Faith Academy, Ota</string>
+	<key>MGLMapboxMetricsEnabledSettingShownInApp</key>
+	<string>YES</string>
 </dict>
 </plist>

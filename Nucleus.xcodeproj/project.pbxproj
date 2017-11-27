@@ -19,6 +19,7 @@
 		EF59C08A1FA3A9080011D283 /* Cabin-SemiBold-TTF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF59C0821FA3A9070011D283 /* Cabin-SemiBold-TTF.ttf */; };
 		EF59C08B1FA3A9080011D283 /* Cabin-SemiBoldItalic-TTF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF59C0831FA3A9080011D283 /* Cabin-SemiBoldItalic-TTF.ttf */; };
 		EF5C2DF21FCBA46B00F87DDD /* CustomDarkUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5C2DF11FCBA46B00F87DDD /* CustomDarkUIView.swift */; };
+		EF82BDD91FCBBA6100F1BA2F /* dark_style.json in Resources */ = {isa = PBXBuildFile; fileRef = EF82BDD81FCBBA6100F1BA2F /* dark_style.json */; };
 		EF8B80481FA32F7800A4924E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B80471FA32F7800A4924E /* AppDelegate.swift */; };
 		EF8B804A1FA32F7800A4924E /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B80491FA32F7800A4924E /* ProfileController.swift */; };
 		EF8B804D1FA32F7800A4924E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF8B804B1FA32F7800A4924E /* Main.storyboard */; };
@@ -72,6 +73,7 @@
 		EF59C0821FA3A9070011D283 /* Cabin-SemiBold-TTF.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-SemiBold-TTF.ttf"; sourceTree = "<group>"; };
 		EF59C0831FA3A9080011D283 /* Cabin-SemiBoldItalic-TTF.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-SemiBoldItalic-TTF.ttf"; sourceTree = "<group>"; };
 		EF5C2DF11FCBA46B00F87DDD /* CustomDarkUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDarkUIView.swift; sourceTree = "<group>"; };
+		EF82BDD81FCBBA6100F1BA2F /* dark_style.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = dark_style.json; sourceTree = "<group>"; };
 		EF8B80441FA32F7800A4924E /* Nucleus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nucleus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF8B80471FA32F7800A4924E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF8B80491FA32F7800A4924E /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 		EF8B803B1FA32F7800A4924E = {
 			isa = PBXGroup;
 			children = (
+				EF82BDD81FCBBA6100F1BA2F /* dark_style.json */,
 				EF8B80461FA32F7800A4924E /* Nucleus */,
 				EF8B805E1FA32F7800A4924E /* NucleusTests */,
 				EF8B80691FA32F7800A4924E /* NucleusUITests */,
@@ -346,6 +349,7 @@
 				EFF585A81FC7715C001BC20C /* fontawesome-webfont.ttf in Resources */,
 				EF8B804D1FA32F7800A4924E /* Main.storyboard in Resources */,
 				EF59C0871FA3A9080011D283 /* Cabin-Italic-TTF.ttf in Resources */,
+				EF82BDD91FCBBA6100F1BA2F /* dark_style.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,13 +9,14 @@
 import UIKit
 import CoreLocation
 import MapKit
-import Mapbox
+import GoogleMaps
 
 class VenueController: UIViewController {
     
     var latitude: CLLocationDegrees = 0
     var longitude: CLLocationDegrees = 0
-    @IBOutlet weak var mapView: MGLMapView!
+    
+    @IBOutlet weak var mapView: GMSMapView!
     
     func goToMap(){
         if (UIApplication.shared.canOpenURL(NSURL(string:"comgooglemaps://")! as URL)) {
@@ -46,8 +47,26 @@ class VenueController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+    }
+    
     func removeAttr(){
-        mapView.attributionButton.isHidden = true
+        let camera = GMSCameraPosition.camera(withLatitude: 6.676057699999999, longitude: 3.1714785000000347, zoom: 15.5)
+        mapView.camera = camera
+        
+        do {
+            // Set the map style by passing the URL of the local file.
+            if let styleURL = Bundle.main.url(forResource: "dark_style", withExtension: "json") {
+                mapView.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
+            } else {
+                NSLog("Unable to find style.json")
+            }
+        } catch {
+            NSLog("One or more of the map styles failed to load. \(error)")
+        }
+
+        
     }
     
 }

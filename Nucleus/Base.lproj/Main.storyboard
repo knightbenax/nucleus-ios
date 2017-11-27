@@ -317,9 +317,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUZ-wk-Zm9" userLabel="Main Parent" customClass="MGLMapView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUZ-wk-Zm9" userLabel="Main Parent">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gi0-3u-gNm" userLabel="MapView" customClass="GMSMapView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vLN-jy-aX2">
                                         <rect key="frame" x="1" y="0.0" width="75" height="812"/>
                                         <subviews>
@@ -359,10 +363,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1nG-rb-rgy">
-                                        <rect key="frame" x="75" y="81" width="300" height="692"/>
+                                        <rect key="frame" x="75" y="81" width="300" height="161"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Faith Academy, Canaanland, Ota" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9m-hs-RJ9" userLabel="nameLabel">
-                                                <rect key="frame" x="12" y="10" width="214.66666666666666" height="73"/>
+                                                <rect key="frame" x="12" y="10" width="225.66666666666666" height="70"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="UFa-6L-TPy"/>
                                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="260" id="ejL-9x-8Mh"/>
@@ -372,7 +376,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xih-DD-frQ">
-                                                <rect key="frame" x="12" y="108" width="131.66666666666666" height="41"/>
+                                                <rect key="frame" x="12" y="105" width="131.66666666666666" height="41"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="18"/>
                                                 <state key="normal" title="Uber">
@@ -380,7 +384,7 @@
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYD-YS-Pag">
-                                                <rect key="frame" x="151.66666666666663" y="108" width="131.33333333333337" height="41"/>
+                                                <rect key="frame" x="151.66666666666663" y="105" width="131.33333333333337" height="41"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="41" id="NdN-u5-Rd3"/>
@@ -402,10 +406,11 @@
                                             <constraint firstItem="XYD-YS-Pag" firstAttribute="height" secondItem="xih-DD-frQ" secondAttribute="height" id="grl-kY-Xll"/>
                                             <constraint firstItem="XYD-YS-Pag" firstAttribute="baseline" secondItem="xih-DD-frQ" secondAttribute="baseline" id="kmk-Hf-kif"/>
                                             <constraint firstAttribute="trailing" secondItem="XYD-YS-Pag" secondAttribute="trailing" constant="17" id="nwF-w3-Hvu"/>
+                                            <constraint firstAttribute="bottom" secondItem="XYD-YS-Pag" secondAttribute="bottom" constant="15" id="oPH-LC-sdd"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Venue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWt-z6-1Xi">
-                                        <rect key="frame" x="162" y="54" width="51" height="22"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Venue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWt-z6-1Xi">
+                                        <rect key="frame" x="162" y="55" width="51" height="21"/>
                                         <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="18"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -413,42 +418,33 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="1nG-rb-rgy" firstAttribute="leading" secondItem="JzX-He-4AK" secondAttribute="leading" constant="75" id="3SM-85-jXk"/>
+                                    <constraint firstItem="Gi0-3u-gNm" firstAttribute="trailing" secondItem="JzX-He-4AK" secondAttribute="trailing" id="3wK-oD-x6e"/>
                                     <constraint firstItem="1nG-rb-rgy" firstAttribute="top" secondItem="ZUZ-wk-Zm9" secondAttribute="top" constant="81" id="8Go-mG-yF1"/>
                                     <constraint firstAttribute="bottom" secondItem="vLN-jy-aX2" secondAttribute="bottom" id="UvX-37-h6n"/>
-                                    <constraint firstItem="JzX-He-4AK" firstAttribute="bottom" secondItem="1nG-rb-rgy" secondAttribute="bottom" constant="5" id="apH-Cy-3xC"/>
+                                    <constraint firstAttribute="bottom" secondItem="Gi0-3u-gNm" secondAttribute="bottom" id="bIb-q5-sbd"/>
+                                    <constraint firstItem="Gi0-3u-gNm" firstAttribute="leading" secondItem="JzX-He-4AK" secondAttribute="leading" id="biP-NK-1Ob"/>
                                     <constraint firstItem="vLN-jy-aX2" firstAttribute="leading" secondItem="ZUZ-wk-Zm9" secondAttribute="leading" constant="1" id="chh-RL-1YT"/>
                                     <constraint firstItem="1nG-rb-rgy" firstAttribute="top" secondItem="GWt-z6-1Xi" secondAttribute="bottom" constant="5" id="fdO-x1-PA1"/>
+                                    <constraint firstItem="GWt-z6-1Xi" firstAttribute="leading" secondItem="vLN-jy-aX2" secondAttribute="trailing" constant="86" id="utC-zC-Rqw"/>
                                     <constraint firstItem="GWt-z6-1Xi" firstAttribute="centerX" secondItem="ZUZ-wk-Zm9" secondAttribute="centerX" id="wvq-fd-8wf"/>
+                                    <constraint firstItem="Gi0-3u-gNm" firstAttribute="top" secondItem="ZUZ-wk-Zm9" secondAttribute="top" id="xBC-6u-BqS"/>
                                     <constraint firstItem="1nG-rb-rgy" firstAttribute="trailing" secondItem="JzX-He-4AK" secondAttribute="trailing" id="xje-Af-Hgg"/>
                                     <constraint firstItem="vLN-jy-aX2" firstAttribute="top" secondItem="ZUZ-wk-Zm9" secondAttribute="top" id="z2v-lO-ExI"/>
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="JzX-He-4AK"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="styleURL__" value="mapbox://styles/mapbox/dark-v9"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="zoomLevel">
-                                        <real key="value" value="14"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showsHeading" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="latitude">
-                                        <real key="value" value="6.6760576999999994"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="longitude">
-                                        <real key="value" value="3.1714785000000347"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="ZUZ-wk-Zm9" secondAttribute="trailing" id="OmF-GW-cY6"/>
-                            <constraint firstAttribute="bottom" secondItem="ZUZ-wk-Zm9" secondAttribute="bottom" id="lvM-wN-xbl"/>
+                            <constraint firstAttribute="bottom" secondItem="ZUZ-wk-Zm9" secondAttribute="bottom" id="k1O-4r-UvP"/>
                             <constraint firstItem="ZUZ-wk-Zm9" firstAttribute="top" secondItem="glz-lY-OM3" secondAttribute="top" id="nqR-nB-RAV"/>
                             <constraint firstItem="ZUZ-wk-Zm9" firstAttribute="leading" secondItem="glz-lY-OM3" secondAttribute="leading" id="sVT-Vc-te9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qm6-KF-26N"/>
                     </view>
                     <connections>
-                        <outlet property="mapView" destination="ZUZ-wk-Zm9" id="Bxh-d1-GiD"/>
+                        <outlet property="mapView" destination="Gi0-3u-gNm" id="kK2-Oc-37q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XN7-Ia-gNT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -508,7 +504,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWd-wD-Odk">
-                                        <rect key="frame" x="140" y="55" width="96" height="21"/>
+                                        <rect key="frame" x="139.66666666666666" y="55" width="96" height="21"/>
                                         <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="18"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>

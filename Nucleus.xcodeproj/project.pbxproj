@@ -17,10 +17,10 @@
 		EF59C0891FA3A9080011D283 /* Cabin-BoldItalic-TTF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF59C0811FA3A9070011D283 /* Cabin-BoldItalic-TTF.ttf */; };
 		EF59C08A1FA3A9080011D283 /* Cabin-SemiBold-TTF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF59C0821FA3A9070011D283 /* Cabin-SemiBold-TTF.ttf */; };
 		EF59C08B1FA3A9080011D283 /* Cabin-SemiBoldItalic-TTF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF59C0831FA3A9080011D283 /* Cabin-SemiBoldItalic-TTF.ttf */; };
+		EF5C2DF21FCBA46B00F87DDD /* CustomDarkUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5C2DF11FCBA46B00F87DDD /* CustomDarkUIView.swift */; };
 		EF8B80481FA32F7800A4924E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B80471FA32F7800A4924E /* AppDelegate.swift */; };
 		EF8B804A1FA32F7800A4924E /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B80491FA32F7800A4924E /* ProfileController.swift */; };
 		EF8B804D1FA32F7800A4924E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF8B804B1FA32F7800A4924E /* Main.storyboard */; };
-		EF8B80501FA32F7800A4924E /* Nucleus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF8B804E1FA32F7800A4924E /* Nucleus.xcdatamodeld */; };
 		EF8B80521FA32F7800A4924E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF8B80511FA32F7800A4924E /* Assets.xcassets */; };
 		EF8B80551FA32F7800A4924E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF8B80531FA32F7800A4924E /* LaunchScreen.storyboard */; };
 		EF8B80601FA32F7800A4924E /* NucleusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B805F1FA32F7800A4924E /* NucleusTests.swift */; };
@@ -59,11 +59,11 @@
 		EF59C0811FA3A9070011D283 /* Cabin-BoldItalic-TTF.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-BoldItalic-TTF.ttf"; sourceTree = "<group>"; };
 		EF59C0821FA3A9070011D283 /* Cabin-SemiBold-TTF.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-SemiBold-TTF.ttf"; sourceTree = "<group>"; };
 		EF59C0831FA3A9080011D283 /* Cabin-SemiBoldItalic-TTF.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-SemiBoldItalic-TTF.ttf"; sourceTree = "<group>"; };
+		EF5C2DF11FCBA46B00F87DDD /* CustomDarkUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDarkUIView.swift; sourceTree = "<group>"; };
 		EF8B80441FA32F7800A4924E /* Nucleus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nucleus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF8B80471FA32F7800A4924E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF8B80491FA32F7800A4924E /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		EF8B804C1FA32F7800A4924E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		EF8B804F1FA32F7800A4924E /* Nucleus.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Nucleus.xcdatamodel; sourceTree = "<group>"; };
 		EF8B80511FA32F7800A4924E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF8B80541FA32F7800A4924E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF8B80561FA32F7800A4924E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -151,11 +151,11 @@
 				EF8B80511FA32F7800A4924E /* Assets.xcassets */,
 				EF8B80531FA32F7800A4924E /* LaunchScreen.storyboard */,
 				EF8B80561FA32F7800A4924E /* Info.plist */,
-				EF8B804E1FA32F7800A4924E /* Nucleus.xcdatamodeld */,
 				EF8B80781FA34BE700A4924E /* CustomUIView.swift */,
 				EF8B807A1FA3925700A4924E /* LoginController.swift */,
 				EFF585A91FC775D1001BC20C /* CustomEditText.swift */,
 				EF4F2C661FCB758000EC4268 /* VenueController.swift */,
+				EF5C2DF11FCBA46B00F87DDD /* CustomDarkUIView.swift */,
 			);
 			path = Nucleus;
 			sourceTree = "<group>";
@@ -321,7 +321,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF8B80501FA32F7800A4924E /* Nucleus.xcdatamodeld in Sources */,
 				EFF585AA1FC775D1001BC20C /* CustomEditText.swift in Sources */,
 				EF8B80791FA34BE700A4924E /* CustomUIView.swift in Sources */,
 				EF8B804A1FA32F7800A4924E /* ProfileController.swift in Sources */,
@@ -329,6 +328,7 @@
 				EF4F2C651FCAB51900EC4268 /* UIImage+AddBlendMode.swift in Sources */,
 				EF8B807B1FA3925700A4924E /* LoginController.swift in Sources */,
 				EF4F2C671FCB758000EC4268 /* VenueController.swift in Sources */,
+				EF5C2DF21FCBA46B00F87DDD /* CustomDarkUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,19 +632,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		EF8B804E1FA32F7800A4924E /* Nucleus.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				EF8B804F1FA32F7800A4924E /* Nucleus.xcdatamodel */,
-			);
-			currentVersion = EF8B804F1FA32F7800A4924E /* Nucleus.xcdatamodel */;
-			path = Nucleus.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = EF8B803C1FA32F7800A4924E /* Project object */;
 }

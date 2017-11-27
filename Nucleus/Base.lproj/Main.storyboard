@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zDQ-7G-bG6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UKP-Rl-qSJ">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -447,7 +447,9 @@
                         <viewLayoutGuide key="safeArea" id="qm6-KF-26N"/>
                     </view>
                     <connections>
+                        <outlet property="directionsBtn" destination="XYD-YS-Pag" id="CHB-u2-ain"/>
                         <outlet property="mapView" destination="Gi0-3u-gNm" id="kK2-Oc-37q"/>
+                        <outlet property="uberBtn" destination="xih-DD-frQ" id="o7x-ba-SqW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XN7-Ia-gNT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -507,7 +509,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWd-wD-Odk">
-                                        <rect key="frame" x="141" y="51" width="93" height="22"/>
+                                        <rect key="frame" x="142" y="51" width="93" height="22"/>
                                         <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="18"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>

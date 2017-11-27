@@ -16,6 +16,8 @@ class VenueController: UIViewController {
     var latitude: CLLocationDegrees = 6.676057699999999
     var longitude: CLLocationDegrees = 3.1714785000000347
     
+    @IBOutlet weak var uberBtn: UIButton!
+    @IBOutlet weak var directionsBtn: UIButton!
     @IBAction func directionClick(_ sender: Any) {
         goToMap()
     }
@@ -46,8 +48,26 @@ class VenueController: UIViewController {
         super.viewDidLoad()
         
         removeAttr()
+        setButtons()
          //AIzaSyArNf1B72BOCukW8C5FI5PgJvMKeMN-KQ0 
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    func setButtons(){
+        uberBtn.layer.shadowColor = UIColor.black.cgColor
+        uberBtn.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        uberBtn.layer.shadowRadius = 20
+        
+        uberBtn.layer.shadowOpacity = 0.3
+        uberBtn.layer.cornerRadius = 5
+        
+        directionsBtn.layer.shadowColor = UIColor.black.cgColor
+        directionsBtn.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        directionsBtn.layer.shadowRadius = 20
+        
+        directionsBtn.layer.shadowOpacity = 0.3
+        directionsBtn.layer.cornerRadius = 5
+    
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

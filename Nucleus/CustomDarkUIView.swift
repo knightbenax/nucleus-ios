@@ -21,7 +21,7 @@ class CustomDarkUIView: UIView {
         gradientLayer.colors = [color1, color2]
         gradientLayer.locations = [0.0, 1.0]
         gradientLayer.startPoint = CGPoint(x: 0, y: 0)
-        gradientLayer.endPoint = CGPoint(x: 0, y: self.bounds.height)
+        gradientLayer.endPoint = CGPoint(x: self.bounds.width, y: self.bounds.height)
         self.layer.insertSublayer(gradientLayer, at: 0)
         //self.layer.addSublayer(gradientLayer)
         

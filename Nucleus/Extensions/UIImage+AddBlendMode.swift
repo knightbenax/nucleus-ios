@@ -28,7 +28,7 @@ extension UIImage {
         
         // Apply gradient
         context.clip(to: rect, mask: self.cgImage!)
-        context.drawLinearGradient(gradient!, start: CGPoint(x: 0, y: 0), end: CGPoint(x: 0, y: self.size.height), options: .drawsAfterEndLocation)
+        context.drawLinearGradient(gradient!, start: CGPoint(x: 0, y: 0), end: CGPoint(x:  self.size.width, y: self.size.height), options: .drawsAfterEndLocation)
         let gradientImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         

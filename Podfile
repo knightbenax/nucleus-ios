@@ -6,6 +6,7 @@ target 'Nucleus' do
   use_frameworks!
   pod 'GoogleMaps'
   pod 'GooglePlaces'
+  pod 'UberRides', '~> 0.7'
 
 
   # Pods for Nucleus

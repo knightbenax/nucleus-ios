@@ -11,9 +11,25 @@ import UIKit
 class ProfileController: UIViewController {
     
     let gradientLayer = CAGradientLayer()
+    
+    let mainStoryBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
 
     @IBOutlet weak var bgImage: UIImageView!
     @IBOutlet weak var mainParent: UIView!
+    
+    @IBAction func locationBtn(_ sender: Any) {
+        //let nextController = mainStoryBoard.instantiateViewController(withIdentifier: "venueView") as! VenueController
+        //self.navigationController?.pushViewController(nextController, animated: false)
+        //self.dismiss(animated: false)
+        
+        let nextController = mainStoryBoard.instantiateViewController(withIdentifier: "venueView") as! VenueController
+        self.present(nextController, animated: true, completion: nil)
+    }
+    
+    @IBAction func progBtn(_ sender: Any) {
+        let nextController = mainStoryBoard.instantiateViewController(withIdentifier: "programmeView") as! ProgrammeController
+        self.present(nextController, animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

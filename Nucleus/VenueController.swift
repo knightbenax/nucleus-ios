@@ -16,11 +16,25 @@ class VenueController: UIViewController {
     var latitude: CLLocationDegrees = 6.676057699999999
     var longitude: CLLocationDegrees = 3.1714785000000347
     
+    let mainStoryBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+    
     @IBOutlet weak var uberBtn: UIButton!
     @IBOutlet weak var directionsBtn: UIButton!
+    
     @IBAction func directionClick(_ sender: Any) {
         goToMap()
     }
+    
+    @IBAction func progBtn(_ sender: Any) {
+        let nextController = mainStoryBoard.instantiateViewController(withIdentifier: "programmeView") as! ProgrammeController
+        self.present(nextController, animated: true, completion: nil)
+    }
+    
+    @IBAction func profileBtn(_ sender: Any) {
+        let nextController = mainStoryBoard.instantiateViewController(withIdentifier: "profileView") as! ProfileController
+        self.present(nextController, animated: true, completion: nil)
+    }
+    
     @IBOutlet weak var mapView: GMSMapView!
     
     func goToMap(){

@@ -19,9 +19,9 @@ class CustomDarkUIView: UIView {
         let color1 = hexStringToUIColor(hex: "498207").cgColor //UIColor(red: 0.00392157, green: 0.862745, blue: 0.384314, alpha: 1).cgColor
         let color2 = hexStringToUIColor(hex: "FBEA58").cgColor//UIColor(red: 0.0470588, green: 0.486275, blue: 0.839216, alpha: 1).cgColor
         gradientLayer.colors = [color1, color2]
-        gradientLayer.locations = [0.0, 1.0]
+        gradientLayer.locations = [0.0, 0.8]
         gradientLayer.startPoint = CGPoint(x: 0, y: 0)
-        gradientLayer.endPoint = CGPoint(x: self.bounds.width, y: self.bounds.height)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
         self.layer.insertSublayer(gradientLayer, at: 0)
         //self.layer.addSublayer(gradientLayer)
         

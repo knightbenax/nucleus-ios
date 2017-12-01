@@ -31,6 +31,8 @@
 		EF8B806B1FA32F7800A4924E /* NucleusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B806A1FA32F7800A4924E /* NucleusUITests.swift */; };
 		EF8B80791FA34BE700A4924E /* CustomUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B80781FA34BE700A4924E /* CustomUIView.swift */; };
 		EF8B807B1FA3925700A4924E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B807A1FA3925700A4924E /* LoginController.swift */; };
+		EFA74F5C1FD0CC900085BC60 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA74F5B1FD0CC900085BC60 /* CustomLabel.swift */; };
+		EFA74F5E1FD0D7EA0085BC60 /* RoundedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA74F5D1FD0D7EA0085BC60 /* RoundedLabel.swift */; };
 		EFF585A81FC7715C001BC20C /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EFF585A71FC7715C001BC20C /* fontawesome-webfont.ttf */; };
 		EFF585AA1FC775D1001BC20C /* CustomEditText.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF585A91FC775D1001BC20C /* CustomEditText.swift */; };
 		F3322A8819063CF246CBE7F1 /* Pods_Nucleus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E93AE82285AA88A68E7D1A28 /* Pods_Nucleus.framework */; };
@@ -93,6 +95,8 @@
 		EF8B806C1FA32F7800A4924E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF8B80781FA34BE700A4924E /* CustomUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIView.swift; sourceTree = "<group>"; };
 		EF8B807A1FA3925700A4924E /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		EFA74F5B1FD0CC900085BC60 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
+		EFA74F5D1FD0D7EA0085BC60 /* RoundedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedLabel.swift; sourceTree = "<group>"; };
 		EFF585A71FC7715C001BC20C /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
 		EFF585A91FC775D1001BC20C /* CustomEditText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEditText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -205,6 +209,8 @@
 				EF4F2C661FCB758000EC4268 /* VenueController.swift */,
 				EF5C2DF11FCBA46B00F87DDD /* CustomDarkUIView.swift */,
 				EF82BDDA1FCE427700F1BA2F /* ProgrammeController.swift */,
+				EFA74F5B1FD0CC900085BC60 /* CustomLabel.swift */,
+				EFA74F5D1FD0D7EA0085BC60 /* RoundedLabel.swift */,
 			);
 			path = Nucleus;
 			sourceTree = "<group>";
@@ -536,6 +542,8 @@
 			files = (
 				EFF585AA1FC775D1001BC20C /* CustomEditText.swift in Sources */,
 				EF82BDDD1FCE49C000F1BA2F /* TransUIView.swift in Sources */,
+				EFA74F5E1FD0D7EA0085BC60 /* RoundedLabel.swift in Sources */,
+				EFA74F5C1FD0CC900085BC60 /* CustomLabel.swift in Sources */,
 				EF8B80791FA34BE700A4924E /* CustomUIView.swift in Sources */,
 				EF8B804A1FA32F7800A4924E /* ProfileController.swift in Sources */,
 				EF82BDDB1FCE427700F1BA2F /* ProgrammeController.swift in Sources */,

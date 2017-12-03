@@ -18,8 +18,18 @@
 	<string>1.1</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>comgooglemaps</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>MGLMapboxAccessToken</key>
+	<string>pk.eyJ1Ijoia25pZ2h0YmVuYXgiLCJhIjoiY2lnYzQ3ZGZxMmV6MndibTMzb3hhM2syYyJ9.Z86x61Ogi-DVrcNB2URI9w</string>
+	<key>MGLMapboxMetricsEnabledSettingShownInApp</key>
+	<string>YES</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Shows directions from you to Faith Academy, Ota</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Cabin-Bold-TTF.ttf</string>
@@ -39,7 +49,7 @@
 		<string>armv7</string>
 	</array>
 	<key>UIStatusBarStyle</key>
-	<string>UIStatusBarStyleDefault</string>
+	<string>UIStatusBarStyleLightContent</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
@@ -50,16 +60,6 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>MGLMapboxAccessToken</key>
-	<string>pk.eyJ1Ijoia25pZ2h0YmVuYXgiLCJhIjoiY2lnYzQ3ZGZxMmV6MndibTMzb3hhM2syYyJ9.Z86x61Ogi-DVrcNB2URI9w</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Shows directions from you to Faith Academy, Ota</string>
-	<key>MGLMapboxMetricsEnabledSettingShownInApp</key>
-	<string>YES</string>
-	<key>LSApplicationQueriesSchemes</key>
-	<array>
-		<string>comgooglemaps</string>
 	</array>
 </dict>
 </plist>

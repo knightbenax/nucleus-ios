@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class LoginController: UIViewController {
     
@@ -14,6 +15,12 @@ class LoginController: UIViewController {
     
     @IBOutlet weak var signInPanel: UIView!
     @IBOutlet weak var registerBtn: UIButton!
+    
+    let this_headers: HTTPHeaders = [
+        //"Authorization": "Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==",
+        //"Accept": "application/json"
+        "TOK": "blah"
+    ]
     
     @IBAction func registerClick(_ sender: Any) {
         
@@ -66,6 +73,25 @@ class LoginController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         self.view.endEditing(true)
+        
+    }
+    
+    func registerParticipant(){
+        let headers: HTTPHeaders = [
+            "Authorization": "Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==",
+            "Accept": "application/json"
+        ]
+        
+        //self.appDelegate.api_url
+        //let rating_int = Int64(ratingVC.cosmosStarRating.rating)
+        
+        let comment = ""
+        
+        let parameters: Parameters = [
+            "name": comment, "phone" : comment, "email": comment, "hear" : comment, "career" : comment, "first" : comment, "gender" : comment
+        ]
+        
+        Alamofire.request("http://campjoseph.ydiworld.org/register/new", method: .post, parameters: parameters, encoding: JSONEncoding.default)
         
     }
     

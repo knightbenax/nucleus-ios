@@ -7,7 +7,9 @@ target 'Nucleus' do
   pod 'GoogleMaps'
   pod 'GooglePlaces'
   pod 'UberRides', '~> 0.7'
-  pod 'Alamofire', '~> 4.4'
+  pod 'Alamofire', '~> 4.5'
+  pod 'RZTransitions'
+  pod 'MKRingProgressView'
 
 
   # Pods for Nucleus

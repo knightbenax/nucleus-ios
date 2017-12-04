@@ -16,6 +16,14 @@ class LoginController: UIViewController {
     @IBOutlet weak var signInPanel: UIView!
     @IBOutlet weak var registerBtn: UIButton!
     
+    @IBOutlet weak var surnameText: CustomEditText!
+    @IBOutlet weak var genderText: CustomEditText!
+    @IBOutlet weak var phoneText: CustomEditText!
+    @IBOutlet weak var emailText: CustomEditText!
+    @IBOutlet weak var hearText: CustomEditText!
+    @IBOutlet weak var careerText: CustomEditText!
+    @IBOutlet weak var firstTimeText: CustomEditText!
+    
     let this_headers: HTTPHeaders = [
         //"Authorization": "Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==",
         //"Accept": "application/json"
@@ -84,11 +92,10 @@ class LoginController: UIViewController {
         
         //self.appDelegate.api_url
         //let rating_int = Int64(ratingVC.cosmosStarRating.rating)
-        
-        let comment = ""
+        //let comment = ""
         
         let parameters: Parameters = [
-            "name": comment, "phone" : comment, "email": comment, "hear" : comment, "career" : comment, "first" : comment, "gender" : comment
+            "name": surnameText.text!, "phone" : phoneText.text!, "email": emailText.text!, "hear" : hearText.text!, "career" : careerText.text!, "first" : firstTimeText.text!, "gender" : genderText.text!
         ]
         
         Alamofire.request("http://campjoseph.ydiworld.org/register/new", method: .post, parameters: parameters, encoding: JSONEncoding.default)

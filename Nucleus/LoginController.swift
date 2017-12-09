@@ -8,8 +8,9 @@
 
 import UIKit
 import Alamofire
+import MKRingProgressView
 
-class LoginController: UIViewController {
+class LoginController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var mainView: UIView!
     
@@ -23,6 +24,25 @@ class LoginController: UIViewController {
     @IBOutlet weak var hearText: CustomEditText!
     @IBOutlet weak var careerText: CustomEditText!
     @IBOutlet weak var firstTimeText: CustomEditText!
+    
+    @IBAction func regSubmitButtonClick(_ sender: Any) {
+    
+        registerParticipant()
+    
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        // Try to find next responder
+        if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            // Not found, so remove keyboard.
+            textField.resignFirstResponder()
+        }
+        // Do not add a line break
+        return false
+    }
     
     let this_headers: HTTPHeaders = [
         //"Authorization": "Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==",
@@ -76,6 +96,27 @@ class LoginController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         setBg()
         setButtons()
+        
+        surnameText.delegate = self
+        surnameText.tag = 1
+        
+        genderText.delegate = self
+        genderText.tag = 2
+        
+        phoneText.delegate = self
+        phoneText.tag = 3
+        
+        emailText.delegate = self
+        emailText.tag = 4
+        
+        hearText.delegate = self
+        hearText.tag = 5
+        
+        careerText.delegate = self
+        careerText.tag = 6
+        
+        firstTimeText.delegate = self
+        firstTimeText.tag = 7
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -85,21 +126,104 @@ class LoginController: UIViewController {
     }
     
     func registerParticipant(){
-        let headers: HTTPHeaders = [
-            "Authorization": "Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==",
-            "Accept": "application/json"
-        ]
+        if (surnameText.text == ""){
+            let alert = UIAlertController(title: "Field empty", message: "You haven't filled out your name yet.", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+            
+            self.present(alert, animated: true)
+            
+        } else if (genderText.text == "") {
+            
+            let alert = UIAlertController(title: "Field empty", message: "You haven't filled out your gender yet. Hope all is well?", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+            
+            self.present(alert, animated: true)
+        } else if (phoneText.text == ""){
+            
+            let alert = UIAlertController(title: "Field empty", message: "You haven't filled out your phone number.", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+            
+            self.present(alert, animated: true)
+            
+        } else if (emailText.text == ""){
+            
+            let alert = UIAlertController(title: "Field empty", message: "You haven't filled out your email yet.", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+            
+            self.present(alert, animated: true)
+            
+        } else if (hearText.text == ""){
+            
+            let alert = UIAlertController(title: "Field empty", message: "You haven't filled out how you heard about Camp Joseph.", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+            
+            self.present(alert, animated: true)
+            
+        } else if (careerText.text == ""){
+            
+            let alert = UIAlertController(title: "Field empty", message: "You haven't filled out what you do for a living.", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+            
+            self.present(alert, animated: true)
+            
+        } else if (firstTimeText.text == ""){
+            
+            let alert = UIAlertController(title: "Field empty", message: "You haven't filled out if this is your first time.", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+            
+            self.present(alert, animated: true)
         
-        //self.appDelegate.api_url
-        //let rating_int = Int64(ratingVC.cosmosStarRating.rating)
-        //let comment = ""
-        
-        let parameters: Parameters = [
-            "name": surnameText.text!, "phone" : phoneText.text!, "email": emailText.text!, "hear" : hearText.text!, "career" : careerText.text!, "first" : firstTimeText.text!, "gender" : genderText.text!
-        ]
-        
-        Alamofire.request("http://campjoseph.ydiworld.org/register/new", method: .post, parameters: parameters, encoding: JSONEncoding.default)
-        
+        } else {
+            
+            registerPanel.isHidden = true
+            
+            let spinner = ALThreeCircleSpinner(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
+            
+            spinner.tintColor = UIColor.white
+            spinner.hidesWhenStopped = false
+            
+            
+            view.addSubview(spinner)
+            
+            spinner.center = view.center
+            spinner.startAnimating()
+            
+            let _: HTTPHeaders = [
+                "Authorization": "Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==",
+                "Accept": "application/json"
+            ]
+            
+            //self.appDelegate.api_url
+            //let rating_int = Int64(ratingVC.cosmosStarRating.rating)
+            //let comment = ""
+            
+            let parameters: Parameters = [
+                "name": surnameText.text!, "phone" : phoneText.text!, "email": emailText.text!, "hear" : hearText.text!, "career" : careerText.text!, "first" : firstTimeText.text!, "gender" : genderText.text!
+            ]
+            
+            Alamofire.request("http://campjoseph.ydiworld.org/register/new", method: .post, parameters: parameters, encoding: JSONEncoding.default).response { response in
+                //print("Request: \(response.request)")
+                //print("Response: \(response.response)")
+                //print("Error: \(response.error)")
+                
+                let data = response.data
+                let utf8Text = String(data: data!, encoding: .utf8)
+                
+                print("Data: \(String(describing: utf8Text))")
+                
+                /*if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                    print("Data: \(utf8Text)")
+                }*/
+            }
+            
+        }
     }
     
     func setButtons(){

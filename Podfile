@@ -11,7 +11,6 @@ target 'Nucleus' do
   pod 'RZTransitions'
   pod 'MKRingProgressView'
 
-
   # Pods for Nucleus
 
   target 'NucleusTests' do

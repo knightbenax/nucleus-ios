@@ -558,7 +558,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWd-wD-Odk" customClass="RoundedLabel" customModule="Nucleus" customModuleProvider="target">
-                                        <rect key="frame" x="128.33333333333334" y="46" width="120" height="27"/>
+                                        <rect key="frame" x="127.66666666666669" y="46" width="120" height="27"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="18"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -987,6 +987,9 @@ rainbow@sunshine.com</string>
                                                                 <state key="normal" title="Register">
                                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="regSubmitButtonClick:" destination="Z7I-n6-z9o" eventType="touchUpInside" id="cN3-FV-ETC"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
@@ -1080,12 +1083,6 @@ rainbow@sunshine.com</string>
                                     <constraint firstItem="U0g-Iw-yar" firstAttribute="centerY" secondItem="bbV-KO-BWW" secondAttribute="centerY" constant="-8" id="rog-os-KsA"/>
                                     <constraint firstItem="ZFZ-vt-mtq" firstAttribute="leading" secondItem="bbV-KO-BWW" secondAttribute="leading" id="t3r-5K-0uw"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="U0g-Iw-yar"/>
-                                        <exclude reference="nAU-i8-MYA"/>
-                                    </mask>
-                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

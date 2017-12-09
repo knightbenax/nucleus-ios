@@ -33,6 +33,7 @@
 		EF8B807B1FA3925700A4924E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B807A1FA3925700A4924E /* LoginController.swift */; };
 		EFA74F5C1FD0CC900085BC60 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA74F5B1FD0CC900085BC60 /* CustomLabel.swift */; };
 		EFA74F5E1FD0D7EA0085BC60 /* RoundedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA74F5D1FD0D7EA0085BC60 /* RoundedLabel.swift */; };
+		EFD6CFB01FDACC920036A5CC /* ALThreeCircleSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD6CFAF1FDACC920036A5CC /* ALThreeCircleSpinner.swift */; };
 		EFF585A81FC7715C001BC20C /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EFF585A71FC7715C001BC20C /* fontawesome-webfont.ttf */; };
 		EFF585AA1FC775D1001BC20C /* CustomEditText.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF585A91FC775D1001BC20C /* CustomEditText.swift */; };
 		F3322A8819063CF246CBE7F1 /* Pods_Nucleus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E93AE82285AA88A68E7D1A28 /* Pods_Nucleus.framework */; };
@@ -97,6 +98,7 @@
 		EF8B807A1FA3925700A4924E /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		EFA74F5B1FD0CC900085BC60 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		EFA74F5D1FD0D7EA0085BC60 /* RoundedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedLabel.swift; sourceTree = "<group>"; };
+		EFD6CFAF1FDACC920036A5CC /* ALThreeCircleSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALThreeCircleSpinner.swift; sourceTree = "<group>"; };
 		EFF585A71FC7715C001BC20C /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
 		EFF585A91FC775D1001BC20C /* CustomEditText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEditText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -211,6 +213,7 @@
 				EF82BDDA1FCE427700F1BA2F /* ProgrammeController.swift */,
 				EFA74F5B1FD0CC900085BC60 /* CustomLabel.swift */,
 				EFA74F5D1FD0D7EA0085BC60 /* RoundedLabel.swift */,
+				EFD6CFAF1FDACC920036A5CC /* ALThreeCircleSpinner.swift */,
 			);
 			path = Nucleus;
 			sourceTree = "<group>";
@@ -554,6 +557,7 @@
 				EF8B804A1FA32F7800A4924E /* ProfileController.swift in Sources */,
 				EF82BDDB1FCE427700F1BA2F /* ProgrammeController.swift in Sources */,
 				EF8B80481FA32F7800A4924E /* AppDelegate.swift in Sources */,
+				EFD6CFB01FDACC920036A5CC /* ALThreeCircleSpinner.swift in Sources */,
 				EF4F2C651FCAB51900EC4268 /* UIImage+AddBlendMode.swift in Sources */,
 				EF8B807B1FA3925700A4924E /* LoginController.swift in Sources */,
 				EF4F2C671FCB758000EC4268 /* VenueController.swift in Sources */,

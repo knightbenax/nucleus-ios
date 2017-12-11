@@ -10,6 +10,7 @@
 		71E3CEAFB4158CFB14287DF3 /* Pods_NucleusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4D763F54F870079DD3088F /* Pods_NucleusTests.framework */; };
 		EF4F2C651FCAB51900EC4268 /* UIImage+AddBlendMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4F2C641FCAB51900EC4268 /* UIImage+AddBlendMode.swift */; };
 		EF4F2C671FCB758000EC4268 /* VenueController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4F2C661FCB758000EC4268 /* VenueController.swift */; };
+		EF5034381FDEBAA50052EBDE /* String+Capitalize.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5034371FDEBAA50052EBDE /* String+Capitalize.swift */; };
 		EF59C0841FA3A9080011D283 /* Cabin-Medium-TTF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF59C07C1FA3A9070011D283 /* Cabin-Medium-TTF.ttf */; };
 		EF59C0851FA3A9080011D283 /* Cabin-Regular-TTF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF59C07D1FA3A9070011D283 /* Cabin-Regular-TTF.ttf */; };
 		EF59C0861FA3A9080011D283 /* Cabin-MediumItalic-TTF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF59C07E1FA3A9070011D283 /* Cabin-MediumItalic-TTF.ttf */; };
@@ -33,6 +34,7 @@
 		EF8B807B1FA3925700A4924E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8B807A1FA3925700A4924E /* LoginController.swift */; };
 		EFA74F5C1FD0CC900085BC60 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA74F5B1FD0CC900085BC60 /* CustomLabel.swift */; };
 		EFA74F5E1FD0D7EA0085BC60 /* RoundedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA74F5D1FD0D7EA0085BC60 /* RoundedLabel.swift */; };
+		EFD6CFB01FDACC920036A5CC /* ALThreeCircleSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD6CFAF1FDACC920036A5CC /* ALThreeCircleSpinner.swift */; };
 		EFF585A81FC7715C001BC20C /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EFF585A71FC7715C001BC20C /* fontawesome-webfont.ttf */; };
 		EFF585AA1FC775D1001BC20C /* CustomEditText.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF585A91FC775D1001BC20C /* CustomEditText.swift */; };
 		F3322A8819063CF246CBE7F1 /* Pods_Nucleus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E93AE82285AA88A68E7D1A28 /* Pods_Nucleus.framework */; };
@@ -68,6 +70,7 @@
 		E93AE82285AA88A68E7D1A28 /* Pods_Nucleus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nucleus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF4F2C641FCAB51900EC4268 /* UIImage+AddBlendMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+AddBlendMode.swift"; sourceTree = "<group>"; };
 		EF4F2C661FCB758000EC4268 /* VenueController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueController.swift; sourceTree = "<group>"; };
+		EF5034371FDEBAA50052EBDE /* String+Capitalize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Capitalize.swift"; sourceTree = "<group>"; };
 		EF59C07C1FA3A9070011D283 /* Cabin-Medium-TTF.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-Medium-TTF.ttf"; sourceTree = "<group>"; };
 		EF59C07D1FA3A9070011D283 /* Cabin-Regular-TTF.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-Regular-TTF.ttf"; sourceTree = "<group>"; };
 		EF59C07E1FA3A9070011D283 /* Cabin-MediumItalic-TTF.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-MediumItalic-TTF.ttf"; sourceTree = "<group>"; };
@@ -97,6 +100,7 @@
 		EF8B807A1FA3925700A4924E /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		EFA74F5B1FD0CC900085BC60 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		EFA74F5D1FD0D7EA0085BC60 /* RoundedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedLabel.swift; sourceTree = "<group>"; };
+		EFD6CFAF1FDACC920036A5CC /* ALThreeCircleSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALThreeCircleSpinner.swift; sourceTree = "<group>"; };
 		EFF585A71FC7715C001BC20C /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
 		EFF585A91FC775D1001BC20C /* CustomEditText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEditText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				EF4F2C641FCAB51900EC4268 /* UIImage+AddBlendMode.swift */,
+				EF5034371FDEBAA50052EBDE /* String+Capitalize.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -211,6 +216,7 @@
 				EF82BDDA1FCE427700F1BA2F /* ProgrammeController.swift */,
 				EFA74F5B1FD0CC900085BC60 /* CustomLabel.swift */,
 				EFA74F5D1FD0D7EA0085BC60 /* RoundedLabel.swift */,
+				EFD6CFAF1FDACC920036A5CC /* ALThreeCircleSpinner.swift */,
 			);
 			path = Nucleus;
 			sourceTree = "<group>";
@@ -472,11 +478,15 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Nucleus/Pods-Nucleus-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ImagePicker/ImagePicker.framework",
+				"${BUILT_PRODUCTS_DIR}/RZTransitions/RZTransitions.framework",
 				"${BUILT_PRODUCTS_DIR}/UberRides/UberRides.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImagePicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RZTransitions.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UberRides.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -542,6 +552,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF5034381FDEBAA50052EBDE /* String+Capitalize.swift in Sources */,
 				EFF585AA1FC775D1001BC20C /* CustomEditText.swift in Sources */,
 				EF82BDDD1FCE49C000F1BA2F /* TransUIView.swift in Sources */,
 				EFA74F5E1FD0D7EA0085BC60 /* RoundedLabel.swift in Sources */,
@@ -550,6 +561,7 @@
 				EF8B804A1FA32F7800A4924E /* ProfileController.swift in Sources */,
 				EF82BDDB1FCE427700F1BA2F /* ProgrammeController.swift in Sources */,
 				EF8B80481FA32F7800A4924E /* AppDelegate.swift in Sources */,
+				EFD6CFB01FDACC920036A5CC /* ALThreeCircleSpinner.swift in Sources */,
 				EF4F2C651FCAB51900EC4268 /* UIImage+AddBlendMode.swift in Sources */,
 				EF8B807B1FA3925700A4924E /* LoginController.swift in Sources */,
 				EF4F2C671FCB758000EC4268 /* VenueController.swift in Sources */,

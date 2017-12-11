@@ -8,13 +8,82 @@
 
 import UIKit
 import Alamofire
+import ImagePicker
 
-class LoginController: UIViewController {
+class LoginController: UIViewController, UITextFieldDelegate, ImagePickerDelegate {
+    
+    let mainStoryBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+    
+    func wrapperDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
+        guard images.count > 0 else { return }
+        avatarImage = images[0]
+        
+        let imageData:NSData = UIImagePNGRepresentation(avatarImage)! as NSData
+        UserDefaults.standard.set(imageData, forKey: "savedImage")
+        
+        imagePicker.dismiss(animated: true, completion: nil)
+        
+        let nextController = mainStoryBoard.instantiateViewController(withIdentifier: "profileView") as! ProfileController
+        self.present(nextController, animated: true, completion: nil)
+    }
+    
+    func doneButtonDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
+        guard images.count > 0 else { return }
+        avatarImage = images[0]
+        
+        let imageData:NSData = UIImagePNGRepresentation(avatarImage)! as NSData
+        UserDefaults.standard.set(imageData, forKey: "savedImage")
+        
+        imagePicker.dismiss(animated: true, completion: nil)
+        
+        let nextController = mainStoryBoard.instantiateViewController(withIdentifier: "profileView") as! ProfileController
+        self.present(nextController, animated: true, completion: nil)
+    }
+    
+    func cancelButtonDidPress(_ imagePicker: ImagePickerController) {
+       imagePicker.dismiss(animated: true, completion: nil)
+    }
+    
+    var avatarImage : UIImage!
+    
+    @IBOutlet weak var chooseButton: UIButton!
     
     @IBOutlet weak var mainView: UIView!
     
     @IBOutlet weak var signInPanel: UIView!
     @IBOutlet weak var registerBtn: UIButton!
+    @IBOutlet weak var avatarPanel: UIView!
+    
+    @IBOutlet weak var surnameText: CustomEditText!
+    @IBOutlet weak var genderText: CustomEditText!
+    @IBOutlet weak var phoneText: CustomEditText!
+    @IBOutlet weak var emailText: CustomEditText!
+    @IBOutlet weak var hearText: CustomEditText!
+    @IBOutlet weak var careerText: CustomEditText!
+    @IBOutlet weak var firstTimeText: CustomEditText!
+    
+    @IBAction func chooseBtnClick(_ sender: Any) {
+        selectImage()
+    }
+    
+    @IBAction func regSubmitButtonClick(_ sender: Any) {
+    
+        registerParticipant()
+    
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        // Try to find next responder
+        if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            // Not found, so remove keyboard.
+            textField.resignFirstResponder()
+        }
+        // Do not add a line break
+        return false
+    }
     
     let this_headers: HTTPHeaders = [
         //"Authorization": "Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==",
@@ -65,9 +134,31 @@ class LoginController: UIViewController {
         super.viewDidLoad()
         registerPanel.isHidden = true
         signInPanel.isHidden = true
+        avatarPanel.isHidden = true
         // Do any additional setup after loading the view, typically from a nib.
         setBg()
         setButtons()
+        
+        surnameText.delegate = self
+        surnameText.tag = 1
+        
+        genderText.delegate = self
+        genderText.tag = 2
+        
+        phoneText.delegate = self
+        phoneText.tag = 3
+        
+        emailText.delegate = self
+        emailText.tag = 4
+        
+        hearText.delegate = self
+        hearText.tag = 5
+        
+        careerText.delegate = self
+        careerText.tag = 6
+        
+        firstTimeText.delegate = self
+        firstTimeText.tag = 7
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -77,25 +168,150 @@ class LoginController: UIViewController {
     }
     
     func registerParticipant(){
-        let headers: HTTPHeaders = [
-            "Authorization": "Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==",
-            "Accept": "application/json"
-        ]
+        if (surnameText.text == ""){
+            let alert = UIAlertController(title: "Field empty", message: "You haven't filled out your name yet.", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+            
+            self.present(alert, animated: true)
+            
+        } else if (genderText.text == "") {
+            
+            let alert = UIAlertController(title: "Field empty", message: "You haven't filled out your gender yet. Hope all is well?", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+            
+            self.present(alert, animated: true)
+        } else if (phoneText.text == ""){
+            
+            let alert = UIAlertController(title: "Field empty", message: "You haven't filled out your phone number.", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+            
+            self.present(alert, animated: true)
+            
+        } else if (emailText.text == ""){
+            
+            let alert = UIAlertController(title: "Field empty", message: "You haven't filled out your email yet.", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+            
+            self.present(alert, animated: true)
+            
+        } else if (hearText.text == ""){
+            
+            let alert = UIAlertController(title: "Field empty", message: "You haven't filled out how you heard about Camp Joseph.", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+            
+            self.present(alert, animated: true)
+            
+        } else if (careerText.text == ""){
+            
+            let alert = UIAlertController(title: "Field empty", message: "You haven't filled out what you do for a living.", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+            
+            self.present(alert, animated: true)
+            
+        } else if (firstTimeText.text == ""){
+            
+            let alert = UIAlertController(title: "Field empty", message: "You haven't filled out if this is your first time.", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+            
+            self.present(alert, animated: true)
         
-        //self.appDelegate.api_url
-        //let rating_int = Int64(ratingVC.cosmosStarRating.rating)
-        
-        let comment = ""
-        
-        let parameters: Parameters = [
-            "name": comment, "phone" : comment, "email": comment, "hear" : comment, "career" : comment, "first" : comment, "gender" : comment
-        ]
-        
-        Alamofire.request("http://campjoseph.ydiworld.org/register/new", method: .post, parameters: parameters, encoding: JSONEncoding.default)
-        
+        } else {
+            
+            registerPanel.isHidden = true
+            
+            let spinner = ALThreeCircleSpinner(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
+            
+            spinner.tintColor = UIColor.white
+            spinner.hidesWhenStopped = false
+            
+            
+            view.addSubview(spinner)
+            
+            spinner.center = view.center
+            spinner.startAnimating()
+            
+            let _: HTTPHeaders = [
+                "Authorization": "Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==",
+                "Accept": "application/json"
+            ]
+            
+            //self.appDelegate.api_url
+            //let rating_int = Int64(ratingVC.cosmosStarRating.rating)
+            //let comment = ""
+            
+            let parameters: Parameters = [
+                "name": surnameText.text!, "phone" : phoneText.text!, "email": emailText.text!, "hear" : hearText.text!, "career" : careerText.text!, "first" : firstTimeText.text!, "gender" : genderText.text!
+            ]
+            
+            Alamofire.request("http://campjoseph.ydiworld.org/api/register/new", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
+                //print("Request: \(response.request)")
+                //print("Response: \(response.response)")
+                //print("Error: \(response.error)")
+                
+                if let status = response.response?.statusCode {
+                    switch(status){
+                    case 200:
+                        spinner.removeFromSuperview()
+                        
+                        if let result = response.result.value {
+                            let JSON = result as! NSDictionary
+                            let statusText: Bool = JSON.object(forKey: "success")! as! Bool
+                            _ = JSON.object(forKey: "last_insert_id")!
+                            
+                            if (statusText == true){
+                                self.avatarPanel.isHidden = false
+                                
+                                UserDefaults.standard.set(self.surnameText.text, forKey: "savedName")
+                                UserDefaults.standard.set(self.careerText.text, forKey: "savedCareer")
+                                UserDefaults.standard.set(self.emailText.text, forKey: "savedEmail")
+                                UserDefaults.standard.set(self.phoneText.text, forKey: "savedPhone")
+                                UserDefaults.standard.set(self.genderText.text, forKey: "savedGender")
+                                UserDefaults.standard.set(self.hearText.text, forKey: "savedHear")
+                                UserDefaults.standard.set(self.firstTimeText.text, forKey: "savedFirst")
+                                //UserDefaults.standard.set(self.firstTimeText.text, forKey: "savedFirst")
+                            }
+                            //print(JSON)
+                        }
+                        //print("Data: \(String(describing: utf8Text))")
+                        //print("example success")
+                    default:
+                        spinner.removeFromSuperview()
+                        
+                        print("error with response status: \(status)")
+                    }
+                }
+                
+                
+                /*if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                    print("Data: \(utf8Text)")
+                }*/
+            }
+            
+        }
+    }
+    
+    func selectImage(){
+        let imagePickerController = ImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.imageLimit = 1
+        present(imagePickerController, animated: true, completion: nil)
     }
     
     func setButtons(){
+        chooseButton.layer.shadowColor = UIColor.black.cgColor
+        chooseButton.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        chooseButton.layer.shadowRadius = 20
+        
+        chooseButton.layer.shadowOpacity = 0.3
+        chooseButton.layer.cornerRadius = 5
+        
         registerBtn.layer.shadowColor = UIColor.black.cgColor
         registerBtn.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
         registerBtn.layer.shadowRadius = 20

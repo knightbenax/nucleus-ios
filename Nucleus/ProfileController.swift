@@ -12,6 +12,14 @@ class ProfileController: UIViewController {
     
     let gradientLayer = CAGradientLayer()
     
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var associateLabel: UILabel!
+    @IBOutlet weak var contactLabel: UILabel!
+    @IBOutlet weak var firstHeardLabel: UILabel!
+    @IBOutlet weak var firstTimeLabel: UILabel!
+    
+    var avatarImage: UIImage!
+    
     let mainStoryBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
 
     @IBOutlet weak var bgImage: UIImageView!
@@ -33,6 +41,36 @@ class ProfileController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let data = UserDefaults.standard.object(forKey: "savedImage") as! NSData
+        avatarImage = UIImage(data: data as Data)
+        
+        var nameText = UserDefaults.standard.object(forKey: "savedName") as? String
+        
+        nameText = nameText?.capitalized
+        
+        nameLabel.text = nameText
+        
+        let associateText = UserDefaults.standard.object(forKey: "savedCareer") as? String
+        
+        var genderText =  UserDefaults.standard.object(forKey: "savedGender") as? String
+        
+        genderText = "(" + (genderText?.capitalizingFirstLetter())! + ")"
+        
+        let phoneText = UserDefaults.standard.object(forKey: "savedPhone") as? String
+        let emailText = UserDefaults.standard.object(forKey: "savedEmail") as? String
+        
+        var hearText = UserDefaults.standard.object(forKey: "savedHear") as? String
+        var firstText = UserDefaults.standard.object(forKey: "savedFirst") as? String
+        
+        contactLabel.text = phoneText! + "\n" + emailText!
+        associateLabel.text = associateText! + " - " + genderText!
+        
+        hearText = hearText?.capitalizingFirstLetter()
+        firstText = firstText?.capitalizingFirstLetter()
+        
+        firstHeardLabel.text = "How did you first hear about Camp Joseph: "  + hearText!
+        firstTimeLabel.text = "First time at Camp Joseph: " + firstText!
         
         getAndTintImage()
         // Do any additional setup after loading the view, typically from a nib.
@@ -70,7 +108,7 @@ class ProfileController: UIViewController {
     }
     
     func getAndTintImage(){
-        let bgImage = UIImage(named: "deinere")
+        let bgImage = avatarImage //UIImage(named: "deinere")
         
         let firstColor = hexStringToUIColor(hex: "498207")
         let secondColor = hexStringToUIColor(hex: "FBEA58")

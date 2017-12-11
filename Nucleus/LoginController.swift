@@ -8,14 +8,43 @@
 
 import UIKit
 import Alamofire
-import MKRingProgressView
+import ImagePicker
 
-class LoginController: UIViewController, UITextFieldDelegate {
+class LoginController: UIViewController, UITextFieldDelegate, ImagePickerDelegate {
+    
+    func wrapperDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
+        guard images.count > 0 else { return }
+        avatarImage = images[0]
+        
+        let imageData:NSData = UIImagePNGRepresentation(avatarImage)! as NSData
+        UserDefaults.standard.set(imageData, forKey: "savedImage")
+        
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
+    
+    func doneButtonDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
+        guard images.count > 0 else { return }
+        avatarImage = images[0]
+        
+        let imageData:NSData = UIImagePNGRepresentation(avatarImage)! as NSData
+        UserDefaults.standard.set(imageData, forKey: "savedImage")
+        
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
+    
+    func cancelButtonDidPress(_ imagePicker: ImagePickerController) {
+       imagePicker.dismiss(animated: true, completion: nil)
+    }
+    
+    var avatarImage : UIImage!
+    
+    @IBOutlet weak var chooseButton: UIButton!
     
     @IBOutlet weak var mainView: UIView!
     
     @IBOutlet weak var signInPanel: UIView!
     @IBOutlet weak var registerBtn: UIButton!
+    @IBOutlet weak var avatarPanel: UIView!
     
     @IBOutlet weak var surnameText: CustomEditText!
     @IBOutlet weak var genderText: CustomEditText!
@@ -24,6 +53,10 @@ class LoginController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var hearText: CustomEditText!
     @IBOutlet weak var careerText: CustomEditText!
     @IBOutlet weak var firstTimeText: CustomEditText!
+    
+    @IBAction func chooseBtnClick(_ sender: Any) {
+        selectImage()
+    }
     
     @IBAction func regSubmitButtonClick(_ sender: Any) {
     
@@ -93,6 +126,7 @@ class LoginController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         registerPanel.isHidden = true
         signInPanel.isHidden = true
+        avatarPanel.isHidden = true
         // Do any additional setup after loading the view, typically from a nib.
         setBg()
         setButtons()
@@ -208,15 +242,36 @@ class LoginController: UIViewController, UITextFieldDelegate {
                 "name": surnameText.text!, "phone" : phoneText.text!, "email": emailText.text!, "hear" : hearText.text!, "career" : careerText.text!, "first" : firstTimeText.text!, "gender" : genderText.text!
             ]
             
-            Alamofire.request("http://campjoseph.ydiworld.org/register/new", method: .post, parameters: parameters, encoding: JSONEncoding.default).response { response in
+            Alamofire.request("http://campjoseph.ydiworld.org/api/register/new", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
                 //print("Request: \(response.request)")
                 //print("Response: \(response.response)")
                 //print("Error: \(response.error)")
                 
-                let data = response.data
-                let utf8Text = String(data: data!, encoding: .utf8)
+                if let status = response.response?.statusCode {
+                    switch(status){
+                    case 200:
+                        spinner.removeFromSuperview()
+                        
+                        if let result = response.result.value {
+                            let JSON = result as! NSDictionary
+                            let statusText: Bool = JSON.object(forKey: "success")! as! Bool
+                            _ = JSON.object(forKey: "last_insert_id")!
+                            
+                            if (statusText == true){
+                                self.avatarPanel.isHidden = false
+                                
+                            }
+                            //print(JSON)
+                        }
+                        //print("Data: \(String(describing: utf8Text))")
+                        //print("example success")
+                    default:
+                        spinner.removeFromSuperview()
+                        
+                        print("error with response status: \(status)")
+                    }
+                }
                 
-                print("Data: \(String(describing: utf8Text))")
                 
                 /*if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
                     print("Data: \(utf8Text)")
@@ -226,7 +281,21 @@ class LoginController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    func selectImage(){
+        let imagePickerController = ImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.imageLimit = 1
+        present(imagePickerController, animated: true, completion: nil)
+    }
+    
     func setButtons(){
+        chooseButton.layer.shadowColor = UIColor.black.cgColor
+        chooseButton.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        chooseButton.layer.shadowRadius = 20
+        
+        chooseButton.layer.shadowOpacity = 0.3
+        chooseButton.layer.cornerRadius = 5
+        
         registerBtn.layer.shadowColor = UIColor.black.cgColor
         registerBtn.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
         registerBtn.layer.shadowRadius = 20

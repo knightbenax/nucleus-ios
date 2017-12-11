@@ -29,7 +29,7 @@
 	<key>MGLMapboxMetricsEnabledSettingShownInApp</key>
 	<string>YES</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Shows directions from you to Faith Academy, Ota</string>
+	<string>Shows directions from you to Faith Academy, Canaanland, Ota</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Cabin-Bold-TTF.ttf</string>
@@ -66,5 +66,9 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>One more step. Choose a photo that would be used as your Avatar</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>One more step. Choose a photo that would be used as your Avatar</string>
 </dict>
 </plist>

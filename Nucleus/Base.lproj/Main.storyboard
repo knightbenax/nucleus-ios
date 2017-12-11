@@ -444,7 +444,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Venue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWt-z6-1Xi" customClass="RoundedLabel" customModule="Nucleus" customModuleProvider="target">
-                                        <rect key="frame" x="151.33333333333334" y="49" width="73.333333333333343" height="27"/>
+                                        <rect key="frame" x="151.33333333333334" y="49" width="73.666666666666657" height="27"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="18"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -558,7 +558,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWd-wD-Odk" customClass="RoundedLabel" customModule="Nucleus" customModuleProvider="target">
-                                        <rect key="frame" x="127.66666666666669" y="46" width="120" height="27"/>
+                                        <rect key="frame" x="128" y="46" width="120" height="27"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="18"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -882,7 +882,7 @@ rainbow@sunshine.com</string>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="35" id="Aa3-dw-haP"/>
                                                                 </constraints>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="18"/>
                                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="yes" keyboardAppearance="alert" returnKeyType="next"/>
                                                             </textField>
@@ -897,7 +897,7 @@ rainbow@sunshine.com</string>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="35" id="NL0-yI-wgM"/>
                                                                 </constraints>
-                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="18"/>
                                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="yes" keyboardAppearance="alert" returnKeyType="next"/>
                                                             </textField>
@@ -1070,6 +1070,43 @@ rainbow@sunshine.com</string>
                                             <constraint firstAttribute="trailing" secondItem="iui-wf-Fwr" secondAttribute="trailing" id="nnp-rL-Sd4"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cmy-HX-b3h" userLabel="Avatar Panel">
+                                        <rect key="frame" x="0.0" y="331.33333333333331" width="375" height="169"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Qb-vq-K8i">
+                                                <rect key="frame" x="47" y="94" width="280" height="50"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="280" id="cD8-gF-sG8"/>
+                                                    <constraint firstAttribute="height" constant="50" id="xB4-gO-BmV"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Cabin-Medium" family="Cabin" pointSize="18"/>
+                                                <state key="normal" title="Choose Photo">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="chooseBtnClick:" destination="Z7I-n6-z9o" eventType="touchUpInside" id="zoE-Z6-1G8"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One more step. Choose a photo that would be used as your Avatar" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5O-E9-adD">
+                                                <rect key="frame" x="60.666666666666671" y="25" width="254.66666666666663" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="80" id="gFB-EY-aey"/>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="270" id="zSh-Z1-Nu0"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="18"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="9Qb-vq-K8i" firstAttribute="centerX" secondItem="cmy-HX-b3h" secondAttribute="centerX" id="3A5-bN-9Se"/>
+                                            <constraint firstItem="O5O-E9-adD" firstAttribute="centerX" secondItem="cmy-HX-b3h" secondAttribute="centerX" id="Sn9-od-XBM"/>
+                                            <constraint firstItem="9Qb-vq-K8i" firstAttribute="top" secondItem="O5O-E9-adD" secondAttribute="bottom" constant="25" id="WY7-Xb-wPT"/>
+                                            <constraint firstItem="O5O-E9-adD" firstAttribute="top" secondItem="cmy-HX-b3h" secondAttribute="top" constant="25" id="Wji-DE-VNQ"/>
+                                            <constraint firstAttribute="bottom" secondItem="9Qb-vq-K8i" secondAttribute="bottom" constant="25" id="utc-nB-0v1"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="U0g-Iw-yar" firstAttribute="centerX" secondItem="bbV-KO-BWW" secondAttribute="centerX" id="AHp-lC-CTJ"/>
@@ -1078,10 +1115,13 @@ rainbow@sunshine.com</string>
                                     <constraint firstItem="ZFZ-vt-mtq" firstAttribute="top" secondItem="bbV-KO-BWW" secondAttribute="top" id="Tzq-KZ-wzb"/>
                                     <constraint firstAttribute="bottom" secondItem="ZFZ-vt-mtq" secondAttribute="bottom" id="Ujv-J6-pwx"/>
                                     <constraint firstAttribute="trailing" secondItem="nAU-i8-MYA" secondAttribute="trailing" id="Xqg-Bo-xJS"/>
+                                    <constraint firstItem="cmy-HX-b3h" firstAttribute="centerY" secondItem="bbV-KO-BWW" secondAttribute="centerY" constant="9" id="fcO-hC-j41"/>
                                     <constraint firstItem="nAU-i8-MYA" firstAttribute="top" secondItem="bbV-KO-BWW" secondAttribute="top" id="fes-mH-Ltx"/>
                                     <constraint firstItem="nAU-i8-MYA" firstAttribute="leading" secondItem="bbV-KO-BWW" secondAttribute="leading" id="kV2-kB-dXp"/>
+                                    <constraint firstItem="cmy-HX-b3h" firstAttribute="centerX" secondItem="bbV-KO-BWW" secondAttribute="centerX" id="l6Q-K8-jn6"/>
                                     <constraint firstItem="U0g-Iw-yar" firstAttribute="centerY" secondItem="bbV-KO-BWW" secondAttribute="centerY" constant="-8" id="rog-os-KsA"/>
                                     <constraint firstItem="ZFZ-vt-mtq" firstAttribute="leading" secondItem="bbV-KO-BWW" secondAttribute="leading" id="t3r-5K-0uw"/>
+                                    <constraint firstItem="cmy-HX-b3h" firstAttribute="leading" secondItem="bbV-KO-BWW" secondAttribute="leading" id="vKS-dz-niP"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -1095,7 +1135,9 @@ rainbow@sunshine.com</string>
                         <viewLayoutGuide key="safeArea" id="FpU-J3-4yY"/>
                     </view>
                     <connections>
+                        <outlet property="avatarPanel" destination="cmy-HX-b3h" id="Wk0-fq-j7M"/>
                         <outlet property="careerText" destination="42l-U4-62Q" id="pYj-qM-b97"/>
+                        <outlet property="chooseButton" destination="9Qb-vq-K8i" id="AHE-vg-SAH"/>
                         <outlet property="emailText" destination="218-XX-xyS" id="ge6-Jb-qLB"/>
                         <outlet property="firstTimeText" destination="kez-x2-EN8" id="vJE-KN-XZa"/>
                         <outlet property="genderText" destination="pYL-mo-R8o" id="aiR-vB-tvz"/>

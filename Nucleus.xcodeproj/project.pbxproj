@@ -10,6 +10,7 @@
 		71E3CEAFB4158CFB14287DF3 /* Pods_NucleusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4D763F54F870079DD3088F /* Pods_NucleusTests.framework */; };
 		EF4F2C651FCAB51900EC4268 /* UIImage+AddBlendMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4F2C641FCAB51900EC4268 /* UIImage+AddBlendMode.swift */; };
 		EF4F2C671FCB758000EC4268 /* VenueController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4F2C661FCB758000EC4268 /* VenueController.swift */; };
+		EF5034381FDEBAA50052EBDE /* String+Capitalize.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5034371FDEBAA50052EBDE /* String+Capitalize.swift */; };
 		EF59C0841FA3A9080011D283 /* Cabin-Medium-TTF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF59C07C1FA3A9070011D283 /* Cabin-Medium-TTF.ttf */; };
 		EF59C0851FA3A9080011D283 /* Cabin-Regular-TTF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF59C07D1FA3A9070011D283 /* Cabin-Regular-TTF.ttf */; };
 		EF59C0861FA3A9080011D283 /* Cabin-MediumItalic-TTF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF59C07E1FA3A9070011D283 /* Cabin-MediumItalic-TTF.ttf */; };
@@ -69,6 +70,7 @@
 		E93AE82285AA88A68E7D1A28 /* Pods_Nucleus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nucleus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF4F2C641FCAB51900EC4268 /* UIImage+AddBlendMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+AddBlendMode.swift"; sourceTree = "<group>"; };
 		EF4F2C661FCB758000EC4268 /* VenueController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueController.swift; sourceTree = "<group>"; };
+		EF5034371FDEBAA50052EBDE /* String+Capitalize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Capitalize.swift"; sourceTree = "<group>"; };
 		EF59C07C1FA3A9070011D283 /* Cabin-Medium-TTF.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-Medium-TTF.ttf"; sourceTree = "<group>"; };
 		EF59C07D1FA3A9070011D283 /* Cabin-Regular-TTF.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-Regular-TTF.ttf"; sourceTree = "<group>"; };
 		EF59C07E1FA3A9070011D283 /* Cabin-MediumItalic-TTF.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-MediumItalic-TTF.ttf"; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				EF4F2C641FCAB51900EC4268 /* UIImage+AddBlendMode.swift */,
+				EF5034371FDEBAA50052EBDE /* String+Capitalize.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -549,6 +552,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF5034381FDEBAA50052EBDE /* String+Capitalize.swift in Sources */,
 				EFF585AA1FC775D1001BC20C /* CustomEditText.swift in Sources */,
 				EF82BDDD1FCE49C000F1BA2F /* TransUIView.swift in Sources */,
 				EFA74F5E1FD0D7EA0085BC60 /* RoundedLabel.swift in Sources */,

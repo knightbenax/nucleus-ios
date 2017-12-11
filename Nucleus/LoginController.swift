@@ -12,6 +12,8 @@ import ImagePicker
 
 class LoginController: UIViewController, UITextFieldDelegate, ImagePickerDelegate {
     
+    let mainStoryBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+    
     func wrapperDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
         guard images.count > 0 else { return }
         avatarImage = images[0]
@@ -20,6 +22,9 @@ class LoginController: UIViewController, UITextFieldDelegate, ImagePickerDelegat
         UserDefaults.standard.set(imageData, forKey: "savedImage")
         
         imagePicker.dismiss(animated: true, completion: nil)
+        
+        let nextController = mainStoryBoard.instantiateViewController(withIdentifier: "profileView") as! ProfileController
+        self.present(nextController, animated: true, completion: nil)
     }
     
     func doneButtonDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
@@ -30,6 +35,9 @@ class LoginController: UIViewController, UITextFieldDelegate, ImagePickerDelegat
         UserDefaults.standard.set(imageData, forKey: "savedImage")
         
         imagePicker.dismiss(animated: true, completion: nil)
+        
+        let nextController = mainStoryBoard.instantiateViewController(withIdentifier: "profileView") as! ProfileController
+        self.present(nextController, animated: true, completion: nil)
     }
     
     func cancelButtonDidPress(_ imagePicker: ImagePickerController) {
@@ -260,6 +268,14 @@ class LoginController: UIViewController, UITextFieldDelegate, ImagePickerDelegat
                             if (statusText == true){
                                 self.avatarPanel.isHidden = false
                                 
+                                UserDefaults.standard.set(self.surnameText.text, forKey: "savedName")
+                                UserDefaults.standard.set(self.careerText.text, forKey: "savedCareer")
+                                UserDefaults.standard.set(self.emailText.text, forKey: "savedEmail")
+                                UserDefaults.standard.set(self.phoneText.text, forKey: "savedPhone")
+                                UserDefaults.standard.set(self.genderText.text, forKey: "savedGender")
+                                UserDefaults.standard.set(self.hearText.text, forKey: "savedHear")
+                                UserDefaults.standard.set(self.firstTimeText.text, forKey: "savedFirst")
+                                //UserDefaults.standard.set(self.firstTimeText.text, forKey: "savedFirst")
                             }
                             //print(JSON)
                         }

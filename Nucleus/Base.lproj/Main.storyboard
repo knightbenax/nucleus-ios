@@ -444,7 +444,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Venue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWt-z6-1Xi" customClass="RoundedLabel" customModule="Nucleus" customModuleProvider="target">
-                                        <rect key="frame" x="151.33333333333334" y="49" width="73.666666666666657" height="27"/>
+                                        <rect key="frame" x="151" y="49" width="73.666666666666686" height="27"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="18"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -558,7 +558,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWd-wD-Odk" customClass="RoundedLabel" customModule="Nucleus" customModuleProvider="target">
-                                        <rect key="frame" x="128" y="46" width="120" height="27"/>
+                                        <rect key="frame" x="128.33333333333334" y="46" width="120" height="27"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="18"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -698,8 +698,13 @@ rainbow@sunshine.com</string>
                         <viewLayoutGuide key="safeArea" id="mNf-Qh-BQE"/>
                     </view>
                     <connections>
+                        <outlet property="associateLabel" destination="SiE-Dm-HSc" id="CIb-tv-0am"/>
                         <outlet property="bgImage" destination="O3Q-54-VWb" id="h9z-sm-Uck"/>
+                        <outlet property="contactLabel" destination="RZ3-Fs-X9V" id="ux8-hO-iEg"/>
+                        <outlet property="firstHeardLabel" destination="O1T-Xa-xhi" id="0iE-Ey-Bto"/>
+                        <outlet property="firstTimeLabel" destination="UBR-Ag-OB2" id="ub0-jT-x59"/>
                         <outlet property="mainParent" destination="frn-cv-NZK" id="SbM-3E-64f"/>
+                        <outlet property="nameLabel" destination="oBm-pQ-AfM" id="rKC-C8-2xa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -1071,7 +1076,7 @@ rainbow@sunshine.com</string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cmy-HX-b3h" userLabel="Avatar Panel">
-                                        <rect key="frame" x="0.0" y="331.33333333333331" width="375" height="169"/>
+                                        <rect key="frame" x="0.0" y="330.66666666666669" width="375" height="169"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Qb-vq-K8i">
                                                 <rect key="frame" x="47" y="94" width="280" height="50"/>
@@ -1089,7 +1094,7 @@ rainbow@sunshine.com</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One more step. Choose a photo that would be used as your Avatar" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5O-E9-adD">
-                                                <rect key="frame" x="60.666666666666671" y="25" width="254.66666666666663" height="44"/>
+                                                <rect key="frame" x="60.999999999999986" y="25" width="254.66666666666663" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="80" id="gFB-EY-aey"/>
                                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="270" id="zSh-Z1-Nu0"/>

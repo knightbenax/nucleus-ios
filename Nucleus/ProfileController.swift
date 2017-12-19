@@ -58,12 +58,13 @@ class ProfileController: UIViewController {
         genderText = "(" + (genderText?.capitalizingFirstLetter())! + ")"
         
         let phoneText = UserDefaults.standard.object(forKey: "savedPhone") as? String
+        let tribe = UserDefaults.standard.object(forKey: "savedTribe") as? String
         let emailText = UserDefaults.standard.object(forKey: "savedEmail") as? String
         
         var hearText = UserDefaults.standard.object(forKey: "savedHear") as? String
         var firstText = UserDefaults.standard.object(forKey: "savedFirst") as? String
         
-        contactLabel.text = phoneText! + "\n" + emailText!
+        contactLabel.text = phoneText! + "\n" + emailText! + "\nTribe: " + tribe!
         associateLabel.text = associateText! + " - " + genderText!
         
         hearText = hearText?.capitalizingFirstLetter()

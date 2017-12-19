@@ -21,7 +21,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         GMSServices.provideAPIKey("AIzaSyArNf1B72BOCukW8C5FI5PgJvMKeMN-KQ0 ")
         GMSPlacesClient.provideAPIKey("AIzaSyArNf1B72BOCukW8C5FI5PgJvMKeMN-KQ0 ")
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        var initialViewController: UIViewController
+        
+        if (UserDefaults.standard.object(forKey: "savedImage") == nil){
+            initialViewController = storyboard.instantiateViewController(withIdentifier: "loginView")
+        } else {
+            initialViewController = storyboard.instantiateViewController(withIdentifier: "profileView")
+        }
+        
+        self.window?.rootViewController = initialViewController
+        self.window?.makeKeyAndVisible()
+        
         return true
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

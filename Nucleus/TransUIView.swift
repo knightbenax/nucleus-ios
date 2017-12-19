@@ -14,11 +14,11 @@ class TransView: UIView {
         super.layoutSubviews()
         //self.layer.addSublayer(gradientLayer)
         
-        self.layer.shadowColor = UIColor.black.cgColor
+        /*self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
         self.layer.shadowRadius = 20
         
-        self.layer.shadowOpacity = 0.3
+        self.layer.shadowOpacity = 0.3*/
         self.layer.cornerRadius = 5
         
     }

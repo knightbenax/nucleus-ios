@@ -72,6 +72,11 @@ class LoginController: UIViewController, UITextFieldDelegate, ImagePickerDelegat
     
     }
     
+    @IBAction func signSubmitButtonClick(_ sender: Any) {
+     
+        signInParticipant()
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool
     {
         // Try to find next responder
@@ -164,6 +169,114 @@ class LoginController: UIViewController, UITextFieldDelegate, ImagePickerDelegat
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         self.view.endEditing(true)
+        
+    }
+    
+    @IBOutlet weak var emailSignText: CustomEditText!
+    
+    
+    func signInParticipant(){
+        
+        if(emailSignText.text == ""){
+            
+            let alert = UIAlertController(title: "Field empty", message: "You haven't filled out your email yet. Expecting magic?", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+            
+            self.present(alert, animated: true)
+            
+        } else {
+            
+            self.signInPanel.isHidden = true
+            
+            let spinner = ALThreeCircleSpinner(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
+            
+            spinner.tintColor = UIColor.white
+            spinner.hidesWhenStopped = false
+            
+            view.addSubview(spinner)
+            
+            spinner.center = view.center
+            spinner.startAnimating()
+            
+            let parameters: Parameters = [
+                 "email": emailSignText.text!
+            ]
+            
+            Alamofire.request("http://campjoseph.ydiworld.org/api/register/participant", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
+                
+                if let status = response.response?.statusCode {
+                    switch(status){
+                    case 200:
+                        spinner.removeFromSuperview()
+                        
+                        if let result = response.result.value {
+                            let JSON = result as! NSDictionary
+                            let statusText: Bool = JSON.object(forKey: "success")! as! Bool
+                            
+                            print(JSON)
+                            
+                            if (statusText == true){
+                                //let tribe = JSON.object(forKey: "tribe") as! String!
+                                let participant = JSON.object(forKey: "participant") as! NSDictionary
+                                let events = JSON.object(forKey: "events") as! NSArray
+                                
+                                let name = participant.object(forKey: "Fullname")! as! String
+                                let id = participant.object(forKey: "ID")! as! Int
+                                let tribe = participant.object(forKey: "Tribe")! as! String
+                                let career = participant.object(forKey: "Career")! as! String
+                                let email = participant.object(forKey: "Email")! as! String
+                                let phone = participant.object(forKey: "Phone")! as! String
+                                let gender = participant.object(forKey: "Gender")! as! String
+                                let hear = participant.object(forKey: "Hear about Camp")! as! String
+                                let first = participant.object(forKey: "First time at Camp")! as! String
+                                //print(name)
+                                
+                                UserDefaults.standard.set(name, forKey: "savedName")
+                                UserDefaults.standard.set(id, forKey: "savedID")
+                                UserDefaults.standard.set(tribe, forKey: "savedTribe")
+                                UserDefaults.standard.set(career, forKey: "savedCareer")
+                                UserDefaults.standard.set(email, forKey: "savedEmail")
+                                UserDefaults.standard.set(phone, forKey: "savedPhone")
+                                UserDefaults.standard.set(gender, forKey: "savedGender")
+                                UserDefaults.standard.set(hear, forKey: "savedHear")
+                                UserDefaults.standard.set(first, forKey: "savedFirst")
+                                UserDefaults.standard.set(events, forKey: "savedEvents")
+                                
+                                self.avatarPanel.isHidden = false
+                                
+                                //UserDefaults.standard.set(tribe, forKey: "savedTribe")
+                                //UserDefaults.standard.set(self.firstTimeText.text, forKey: "savedFirst")
+                            } else if (statusText == false){
+                                
+                                let reason = JSON.object(forKey: "reason")! as! String
+                                
+                                if (reason == "no exist"){
+                                    
+                                    let alert = UIAlertController(title: "Account not found", message: "No registration data was found with this email.", preferredStyle: .alert)
+                                    
+                                    alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+                                    
+                                    self.present(alert, animated: true)
+                                    
+                                    self.signInPanel.isHidden = false
+                                }
+                                
+                            }
+                            
+                        }
+                        //print("Data: \(String(describing: utf8Text))")
+                    //print("example success")
+                    default:
+                        spinner.removeFromSuperview()
+                        
+                        print("error with response status: \(status)")
+                    }
+                    
+                }
+            }
+            
+        }
         
     }
     
@@ -263,12 +376,18 @@ class LoginController: UIViewController, UITextFieldDelegate, ImagePickerDelegat
                         if let result = response.result.value {
                             let JSON = result as! NSDictionary
                             let statusText: Bool = JSON.object(forKey: "success")! as! Bool
-                            _ = JSON.object(forKey: "last_insert_id")!
+                            
+                            print(JSON)
                             
                             if (statusText == true){
+                                let id = JSON.object(forKey: "last_insert_id") as! Int!
+                                let tribe = JSON.object(forKey: "tribe") as! String!
+                                
                                 self.avatarPanel.isHidden = false
                                 
                                 UserDefaults.standard.set(self.surnameText.text, forKey: "savedName")
+                                UserDefaults.standard.set(id, forKey: "savedID")
+                                UserDefaults.standard.set(tribe, forKey: "savedTribe")
                                 UserDefaults.standard.set(self.careerText.text, forKey: "savedCareer")
                                 UserDefaults.standard.set(self.emailText.text, forKey: "savedEmail")
                                 UserDefaults.standard.set(self.phoneText.text, forKey: "savedPhone")
@@ -276,8 +395,23 @@ class LoginController: UIViewController, UITextFieldDelegate, ImagePickerDelegat
                                 UserDefaults.standard.set(self.hearText.text, forKey: "savedHear")
                                 UserDefaults.standard.set(self.firstTimeText.text, forKey: "savedFirst")
                                 //UserDefaults.standard.set(self.firstTimeText.text, forKey: "savedFirst")
+                            } else if (statusText == false){
+                                
+                                let reason = JSON.object(forKey: "reason")! as! String
+                                
+                                if (reason == "exists"){
+                                    
+                                    let alert = UIAlertController(title: "Account exists", message: "This email has already been registered for this event. Sign in with this email or use another email.", preferredStyle: .alert)
+                                    
+                                    alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+                                    
+                                    self.present(alert, animated: true)
+                                    
+                                    self.registerPanel.isHidden = false
+                                }
+                                
                             }
-                            //print(JSON)
+                            
                         }
                         //print("Data: \(String(describing: utf8Text))")
                         //print("example success")

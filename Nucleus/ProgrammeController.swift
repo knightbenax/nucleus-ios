@@ -40,6 +40,10 @@ class ProgrammeController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+    }
+    
     @IBOutlet weak var eventsText: UILabel!
     
     func setProg(){
@@ -54,7 +58,79 @@ class ProgrammeController: UIViewController {
         
         if(result == "27.12.2017"){
             
+            let data = events?.object(at: 0) as! NSDictionary
             
+            let content = data.object(forKey: "content") as! NSArray;
+            
+            for dataObject : Any in content
+            {
+                if let event_data = dataObject as? NSDictionary
+                {
+                    
+                    let time = event_data.object(forKey: "time") as! String
+                    let this_event = event_data.object(forKey: "event") as! String
+                    
+                    eventsText.text = eventsText.text! + time + "\n" + this_event + "\n\n"
+                    
+                }
+            }
+            
+        } else if (result == "28.12.2017"){
+            
+            let data = events?.object(at: 1) as! NSDictionary
+            
+            let content = data.object(forKey: "content") as! NSArray;
+            
+            for dataObject : Any in content
+            {
+                if let event_data = dataObject as? NSDictionary
+                {
+                    
+                    let time = event_data.object(forKey: "time") as! String
+                    let this_event = event_data.object(forKey: "event") as! String
+                    
+                    eventsText.text = eventsText.text! + time + "\n" + this_event + "\n\n"
+                    
+                }
+            }
+            
+        } else if (result == "29.12.2017"){
+            
+            let data = events?.object(at: 2) as! NSDictionary
+            
+            let content = data.object(forKey: "content") as! NSArray;
+            
+            for dataObject : Any in content
+            {
+                if let event_data = dataObject as? NSDictionary
+                {
+                    
+                    let time = event_data.object(forKey: "time") as! String
+                    let this_event = event_data.object(forKey: "event") as! String
+                    
+                    eventsText.text = eventsText.text! + time + "\n" + this_event + "\n\n"
+                    
+                }
+            }
+            
+        } else if (result == "30.12.2017"){
+            
+            let data = events?.object(at: 3) as! NSDictionary
+            
+            let content = data.object(forKey: "content") as! NSArray;
+            
+            for dataObject : Any in content
+            {
+                if let event_data = dataObject as? NSDictionary
+                {
+                    
+                    let time = event_data.object(forKey: "time") as! String
+                    let this_event = event_data.object(forKey: "event") as! String
+                    
+                    eventsText.text = eventsText.text! + time + "\n" + this_event + "\n\n"
+                    
+                }
+            }
             
         } else {
             

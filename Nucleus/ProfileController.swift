@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ProfileController: UIViewController {
     
@@ -74,7 +75,31 @@ class ProfileController: UIViewController {
         firstTimeLabel.text = "First time at Camp Joseph: " + firstText!
         
         getAndTintImage()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        Alamofire.request("http://campjoseph.ydiworld.org/api/register/details", method: .post, encoding: JSONEncoding.default).responseJSON { response in
+            
+            if let status = response.response?.statusCode {
+                switch(status){
+                case 200:
+                    if let result = response.result.value {
+                        let JSON = result as! NSDictionary
+                        let statusText: Bool = JSON.object(forKey: "success")! as! Bool
+                        
+                        if (statusText == true){
+                            //let tribe = JSON.object(forKey: "tribe") as! String!
+                            let events = JSON.object(forKey: "events") as! NSArray
+                            
+                            UserDefaults.standard.set(events, forKey: "savedEvents")
+                        }
+                    }
+                default:
+                    print("error with response status: \(status)")
+                }
+                
+            }
+            
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

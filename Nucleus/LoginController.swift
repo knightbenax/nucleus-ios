@@ -188,6 +188,7 @@ class LoginController: UIViewController, UITextFieldDelegate, ImagePickerDelegat
         } else {
             
             self.signInPanel.isHidden = true
+            self.view.endEditing(true)
             
             let spinner = ALThreeCircleSpinner(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
             
@@ -338,6 +339,7 @@ class LoginController: UIViewController, UITextFieldDelegate, ImagePickerDelegat
         } else {
             
             registerPanel.isHidden = true
+            self.view.endEditing(true)
             
             let spinner = ALThreeCircleSpinner(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
             

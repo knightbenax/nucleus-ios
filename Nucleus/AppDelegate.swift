@@ -10,12 +10,13 @@ import UIKit
 import CoreData
 import GoogleMaps
 import GooglePlaces
+import EventKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var str: String?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -32,6 +33,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else {
             initialViewController = storyboard.instantiateViewController(withIdentifier: "profileView")
         }
+        
+        let htmlFile = Bundle.main.path(forResource: "speakers", ofType: "html")
+        let htmlString = try? String(contentsOfFile: htmlFile!, encoding: String.Encoding.utf8)
+        
+        str = htmlString
         
         self.window?.rootViewController = initialViewController
         self.window?.makeKeyAndVisible()

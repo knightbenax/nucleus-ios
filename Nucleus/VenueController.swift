@@ -30,6 +30,14 @@ class VenueController: UIViewController {
         self.present(nextController, animated: true, completion: nil)
     }
     
+    
+    @IBAction func speakersBtn(_ sender: Any) {
+        
+        let nextController = mainStoryBoard.instantiateViewController(withIdentifier: "speakersView") as! SpeakersController
+        self.present(nextController, animated: true, completion: nil)
+        
+    }
+    
     @IBAction func profileBtn(_ sender: Any) {
         let nextController = mainStoryBoard.instantiateViewController(withIdentifier: "profileView") as! ProfileController
         self.present(nextController, animated: true, completion: nil)

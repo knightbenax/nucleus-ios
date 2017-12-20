@@ -35,6 +35,11 @@ class ProfileController: UIViewController {
         self.present(nextController, animated: true, completion: nil)
     }
     
+    @IBAction func speakerBtn(_ sender: Any) {
+        let nextController = mainStoryBoard.instantiateViewController(withIdentifier: "speakersView") as! SpeakersController
+        self.present(nextController, animated: true, completion: nil)
+    }
+    
     @IBAction func progBtn(_ sender: Any) {
         let nextController = mainStoryBoard.instantiateViewController(withIdentifier: "programmeView") as! ProgrammeController
         self.present(nextController, animated: true, completion: nil)

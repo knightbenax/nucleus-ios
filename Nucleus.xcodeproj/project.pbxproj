@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		71E3CEAFB4158CFB14287DF3 /* Pods_NucleusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4D763F54F870079DD3088F /* Pods_NucleusTests.framework */; };
 		EF20C63B1FE9779400F55DA0 /* UIScrollView+ScrollToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF20C63A1FE9779400F55DA0 /* UIScrollView+ScrollToView.swift */; };
+		EF20C63D1FEA574B00F55DA0 /* SpeakersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF20C63C1FEA574B00F55DA0 /* SpeakersController.swift */; };
 		EF4F2C651FCAB51900EC4268 /* UIImage+AddBlendMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4F2C641FCAB51900EC4268 /* UIImage+AddBlendMode.swift */; };
 		EF4F2C671FCB758000EC4268 /* VenueController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4F2C661FCB758000EC4268 /* VenueController.swift */; };
 		EF5034381FDEBAA50052EBDE /* String+Capitalize.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5034371FDEBAA50052EBDE /* String+Capitalize.swift */; };
@@ -70,6 +71,7 @@
 		D7F27BBABC5765CA2BC5F532 /* Pods-NucleusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NucleusTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NucleusTests/Pods-NucleusTests.release.xcconfig"; sourceTree = "<group>"; };
 		E93AE82285AA88A68E7D1A28 /* Pods_Nucleus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nucleus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF20C63A1FE9779400F55DA0 /* UIScrollView+ScrollToView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+ScrollToView.swift"; sourceTree = "<group>"; };
+		EF20C63C1FEA574B00F55DA0 /* SpeakersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakersController.swift; sourceTree = "<group>"; };
 		EF4F2C641FCAB51900EC4268 /* UIImage+AddBlendMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+AddBlendMode.swift"; sourceTree = "<group>"; };
 		EF4F2C661FCB758000EC4268 /* VenueController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueController.swift; sourceTree = "<group>"; };
 		EF5034371FDEBAA50052EBDE /* String+Capitalize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Capitalize.swift"; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 				EF82BDDC1FCE49C000F1BA2F /* TransUIView.swift */,
 				EF8B807A1FA3925700A4924E /* LoginController.swift */,
 				EFF585A91FC775D1001BC20C /* CustomEditText.swift */,
+				EF20C63C1FEA574B00F55DA0 /* SpeakersController.swift */,
 				EF4F2C661FCB758000EC4268 /* VenueController.swift */,
 				EF5C2DF11FCBA46B00F87DDD /* CustomDarkUIView.swift */,
 				EF82BDDA1FCE427700F1BA2F /* ProgrammeController.swift */,
@@ -560,6 +563,7 @@
 				EF82BDDD1FCE49C000F1BA2F /* TransUIView.swift in Sources */,
 				EFA74F5E1FD0D7EA0085BC60 /* RoundedLabel.swift in Sources */,
 				EFA74F5C1FD0CC900085BC60 /* CustomLabel.swift in Sources */,
+				EF20C63D1FEA574B00F55DA0 /* SpeakersController.swift in Sources */,
 				EF20C63B1FE9779400F55DA0 /* UIScrollView+ScrollToView.swift in Sources */,
 				EF8B80791FA34BE700A4924E /* CustomUIView.swift in Sources */,
 				EF8B804A1FA32F7800A4924E /* ProfileController.swift in Sources */,

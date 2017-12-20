@@ -10,20 +10,30 @@ import UIKit
 import CoreLocation
 import MapKit
 import GoogleMaps
+import UberRides
 
-class VenueController: UIViewController {
+class VenueController: UIViewController,  CLLocationManagerDelegate {
     
     var latitude: CLLocationDegrees = 6.676057699999999
     var longitude: CLLocationDegrees = 3.1714785000000347
     
+    @IBOutlet weak var uberBtn: RideRequestButton!
     let mainStoryBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
     
-    @IBOutlet weak var uberBtn: UIButton!
+    
     @IBOutlet weak var directionsBtn: UIButton!
     
     @IBAction func directionClick(_ sender: Any) {
         goToMap()
     }
+    
+    @IBAction func officialsBtn(_ sender: Any) {
+    
+        let nextController = mainStoryBoard.instantiateViewController(withIdentifier: "detailsView") as! OfficialsController
+        self.present(nextController, animated: true, completion: nil)
+        
+    }
+    
     
     @IBAction func progBtn(_ sender: Any) {
         let nextController = mainStoryBoard.instantiateViewController(withIdentifier: "programmeView") as! ProgrammeController
@@ -71,6 +81,14 @@ class VenueController: UIViewController {
         
         removeAttr()
         setButtons()
+        
+        let dropoffLocation = CLLocation(latitude: latitude, longitude: longitude)
+        let builder = RideParametersBuilder()
+        builder.dropoffLocation = dropoffLocation
+        builder.dropoffNickname = "CJ 2017 - Faith Academy, Canaanland, Ota"
+        
+        uberBtn.rideParameters = builder.build()
+        //determineMyCurrentLocation()
          //AIzaSyArNf1B72BOCukW8C5FI5PgJvMKeMN-KQ0 
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -124,8 +142,46 @@ class VenueController: UIViewController {
         mapView.isIndoorEnabled = true
         mapView.isTrafficEnabled = true
         mapView.isMyLocationEnabled = true
-
+    }
+    
+    var locManager = CLLocationManager()
+    var currentLocation = CLLocation()
+    
+    func determineMyCurrentLocation() {
         
+        locManager.delegate = self
+        locManager.desiredAccuracy = kCLLocationAccuracyBest
+        locManager.requestAlwaysAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locManager.startUpdatingLocation()
+            //locationManager.startUpdatingHeading()
+        }
+        
+       
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let userLocation:CLLocation = locations[0] as CLLocation
+        
+        currentLocation = userLocation
+        locManager.stopUpdatingLocation()
+        latitude = currentLocation.coordinate.latitude
+        longitude = currentLocation.coordinate.longitude
+        
+        getPolylineRoute(from: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), to: CLLocationCoordinate2D(latitude: 6.676057699999999, longitude: 3.1714785000000347))
+        // Call stopUpdatingLocation() to stop listening for location updates,
+        // other wise this function will be called every time when user location changes.
+        
+        // manager.stopUpdatingLocation()
+        
+        //print("user latitude = \(userLocation.coordinate.latitude)")
+        //print("user longitude = \(userLocation.coordinate.longitude)")
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error)
+    {
+        print("Error \(error)")
     }
     
     override func didReceiveMemoryWarning() {

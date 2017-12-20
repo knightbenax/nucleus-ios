@@ -25,10 +25,13 @@ class ProgrammeController: UIViewController {
         let nextController = mainStoryBoard.instantiateViewController(withIdentifier: "venueView") as! VenueController
         self.present(nextController, animated: true, completion: nil)
     }
+ 
+    @IBAction func officialsBtn(_ sender: Any) {
+        let nextController = mainStoryBoard.instantiateViewController(withIdentifier: "detailsView") as! OfficialsController
+        self.present(nextController, animated: true, completion: nil)
+    }
     
-    
-    @IBAction func speakersBtn(_ sender: Any) {
-        
+    @IBAction func speakerBtn(_ sender: Any) {
         let nextController = mainStoryBoard.instantiateViewController(withIdentifier: "speakersView") as! SpeakersController
         self.present(nextController, animated: true, completion: nil)
     }

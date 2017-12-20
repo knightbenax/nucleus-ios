@@ -221,6 +221,7 @@ class LoginController: UIViewController, UITextFieldDelegate, ImagePickerDelegat
                                 //let tribe = JSON.object(forKey: "tribe") as! String!
                                 let participant = JSON.object(forKey: "participant") as! NSDictionary
                                 let events = JSON.object(forKey: "events") as! NSArray
+                                let officials = JSON.object(forKey: "officials") as! NSArray
                                 
                                 let name = participant.object(forKey: "Fullname")! as! String
                                 let id = participant.object(forKey: "ID")! as! Int
@@ -243,6 +244,7 @@ class LoginController: UIViewController, UITextFieldDelegate, ImagePickerDelegat
                                 UserDefaults.standard.set(hear, forKey: "savedHear")
                                 UserDefaults.standard.set(first, forKey: "savedFirst")
                                 UserDefaults.standard.set(events, forKey: "savedEvents")
+                                UserDefaults.standard.set(officials, forKey: "savedOfficials")
                                 
                                 self.avatarPanel.isHidden = false
                                 
@@ -384,6 +386,8 @@ class LoginController: UIViewController, UITextFieldDelegate, ImagePickerDelegat
                             if (statusText == true){
                                 let id = JSON.object(forKey: "last_insert_id") as! Int!
                                 let tribe = JSON.object(forKey: "tribe") as! String!
+                                let events = JSON.object(forKey: "events") as! NSArray
+                                let officials = JSON.object(forKey: "officials") as! NSArray
                                 
                                 self.avatarPanel.isHidden = false
                                 
@@ -396,6 +400,8 @@ class LoginController: UIViewController, UITextFieldDelegate, ImagePickerDelegat
                                 UserDefaults.standard.set(self.genderText.text, forKey: "savedGender")
                                 UserDefaults.standard.set(self.hearText.text, forKey: "savedHear")
                                 UserDefaults.standard.set(self.firstTimeText.text, forKey: "savedFirst")
+                                UserDefaults.standard.set(events, forKey: "savedEvents")
+                                UserDefaults.standard.set(officials, forKey: "savedOfficials")
                                 //UserDefaults.standard.set(self.firstTimeText.text, forKey: "savedFirst")
                             } else if (statusText == false){
                                 

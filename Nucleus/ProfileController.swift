@@ -35,13 +35,18 @@ class ProfileController: UIViewController {
         self.present(nextController, animated: true, completion: nil)
     }
     
-    @IBAction func speakerBtn(_ sender: Any) {
-        let nextController = mainStoryBoard.instantiateViewController(withIdentifier: "speakersView") as! SpeakersController
+    @IBAction func progBtn(_ sender: Any) {
+        let nextController = mainStoryBoard.instantiateViewController(withIdentifier: "programmeView") as! ProgrammeController
         self.present(nextController, animated: true, completion: nil)
     }
     
-    @IBAction func progBtn(_ sender: Any) {
-        let nextController = mainStoryBoard.instantiateViewController(withIdentifier: "programmeView") as! ProgrammeController
+    @IBAction func offici(_ sender: Any) {
+        let nextController = mainStoryBoard.instantiateViewController(withIdentifier: "detailsView") as! OfficialsController
+        self.present(nextController, animated: true, completion: nil)
+    }
+    
+    @IBAction func speakerBtn(_ sender: Any) {
+        let nextController = mainStoryBoard.instantiateViewController(withIdentifier: "speakersView") as! SpeakersController
         self.present(nextController, animated: true, completion: nil)
     }
     
@@ -90,11 +95,15 @@ class ProfileController: UIViewController {
                         let JSON = result as! NSDictionary
                         let statusText: Bool = JSON.object(forKey: "success")! as! Bool
                         
+                        //print(JSON)
+                        
                         if (statusText == true){
                             //let tribe = JSON.object(forKey: "tribe") as! String!
                             let events = JSON.object(forKey: "events") as! NSArray
+                            let officials = JSON.object(forKey: "officials") as! NSArray
                             
                             UserDefaults.standard.set(events, forKey: "savedEvents")
+                            UserDefaults.standard.set(officials, forKey: "savedOfficials")
                         }
                     }
                 default:

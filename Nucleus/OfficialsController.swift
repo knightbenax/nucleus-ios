@@ -1,5 +1,5 @@
 //
-//  SpeakersController.swift
+//  OfficialsController.swift
 //  Nucleus
 //
 //  Created by Bezaleel Ashefor on 20/12/2017.
@@ -7,26 +7,47 @@
 //
 
 import UIKit
-import WebKit
 
-class SpeakersController: UIViewController{
+class OfficialsController: UIViewController {
     
     let mainStoryBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-
     
+    let officials = UserDefaults.standard.object(forKey: "savedOfficials") as? NSArray
+    
+    @IBOutlet weak var eventsText: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        for dataObject : Any in officials!
+        {
+            if let data = dataObject as? NSDictionary
+            {
+                
+                let title = data.object(forKey: "title") as! String
+                let body = data.object(forKey: "body") as! String
+                
+                eventsText.text = eventsText.text! + title + body + "\n\n"
+                
+            }
+            
+        }
+        
+
+    }
     
     @IBAction func venueBtn(_ sender: Any) {
         let nextController = mainStoryBoard.instantiateViewController(withIdentifier: "venueView") as! VenueController
         self.present(nextController, animated: true, completion: nil)
     }
     
-    @IBAction func progBtn(_ sender: Any) {
+    @IBAction func programmeBtn(_ sender: Any) {
         let nextController = mainStoryBoard.instantiateViewController(withIdentifier: "programmeView") as! ProgrammeController
         self.present(nextController, animated: true, completion: nil)
     }
     
-    @IBAction func officialsBtn(_ sender: Any) {
-        let nextController = mainStoryBoard.instantiateViewController(withIdentifier: "detailsView") as! OfficialsController
+    @IBAction func speakerBtn(_ sender: Any) {
+        let nextController = mainStoryBoard.instantiateViewController(withIdentifier: "speakersView") as! SpeakersController
         self.present(nextController, animated: true, completion: nil)
     }
     
@@ -35,19 +56,8 @@ class SpeakersController: UIViewController{
         self.present(nextController, animated: true, completion: nil)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     
 }

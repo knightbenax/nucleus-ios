@@ -10,6 +10,8 @@
 		71E3CEAFB4158CFB14287DF3 /* Pods_NucleusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4D763F54F870079DD3088F /* Pods_NucleusTests.framework */; };
 		EF20C63B1FE9779400F55DA0 /* UIScrollView+ScrollToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF20C63A1FE9779400F55DA0 /* UIScrollView+ScrollToView.swift */; };
 		EF20C63D1FEA574B00F55DA0 /* SpeakersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF20C63C1FEA574B00F55DA0 /* SpeakersController.swift */; };
+		EF20C63F1FEA7BE400F55DA0 /* speakers.html in Resources */ = {isa = PBXBuildFile; fileRef = EF20C63E1FEA7BE400F55DA0 /* speakers.html */; };
+		EF20C6411FEAEDD400F55DA0 /* OfficialsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF20C6401FEAEDD400F55DA0 /* OfficialsController.swift */; };
 		EF4F2C651FCAB51900EC4268 /* UIImage+AddBlendMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4F2C641FCAB51900EC4268 /* UIImage+AddBlendMode.swift */; };
 		EF4F2C671FCB758000EC4268 /* VenueController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4F2C661FCB758000EC4268 /* VenueController.swift */; };
 		EF5034381FDEBAA50052EBDE /* String+Capitalize.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5034371FDEBAA50052EBDE /* String+Capitalize.swift */; };
@@ -72,6 +74,8 @@
 		E93AE82285AA88A68E7D1A28 /* Pods_Nucleus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nucleus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF20C63A1FE9779400F55DA0 /* UIScrollView+ScrollToView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+ScrollToView.swift"; sourceTree = "<group>"; };
 		EF20C63C1FEA574B00F55DA0 /* SpeakersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakersController.swift; sourceTree = "<group>"; };
+		EF20C63E1FEA7BE400F55DA0 /* speakers.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = speakers.html; sourceTree = "<group>"; };
+		EF20C6401FEAEDD400F55DA0 /* OfficialsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficialsController.swift; sourceTree = "<group>"; };
 		EF4F2C641FCAB51900EC4268 /* UIImage+AddBlendMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+AddBlendMode.swift"; sourceTree = "<group>"; };
 		EF4F2C661FCB758000EC4268 /* VenueController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueController.swift; sourceTree = "<group>"; };
 		EF5034371FDEBAA50052EBDE /* String+Capitalize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Capitalize.swift"; sourceTree = "<group>"; };
@@ -220,9 +224,11 @@
 				EF4F2C661FCB758000EC4268 /* VenueController.swift */,
 				EF5C2DF11FCBA46B00F87DDD /* CustomDarkUIView.swift */,
 				EF82BDDA1FCE427700F1BA2F /* ProgrammeController.swift */,
+				EF20C6401FEAEDD400F55DA0 /* OfficialsController.swift */,
 				EFA74F5B1FD0CC900085BC60 /* CustomLabel.swift */,
 				EFA74F5D1FD0D7EA0085BC60 /* RoundedLabel.swift */,
 				EFD6CFAF1FDACC920036A5CC /* ALThreeCircleSpinner.swift */,
+				EF20C63E1FEA7BE400F55DA0 /* speakers.html */,
 			);
 			path = Nucleus;
 			sourceTree = "<group>";
@@ -371,6 +377,7 @@
 				EF59C0881FA3A9080011D283 /* Cabin-Bold-TTF.ttf in Resources */,
 				EF59C0841FA3A9080011D283 /* Cabin-Medium-TTF.ttf in Resources */,
 				EFF585A81FC7715C001BC20C /* fontawesome-webfont.ttf in Resources */,
+				EF20C63F1FEA7BE400F55DA0 /* speakers.html in Resources */,
 				EF8B804D1FA32F7800A4924E /* Main.storyboard in Resources */,
 				EF59C0871FA3A9080011D283 /* Cabin-Italic-TTF.ttf in Resources */,
 				EF82BDD91FCBBA6100F1BA2F /* dark_style.json in Resources */,
@@ -565,6 +572,7 @@
 				EFA74F5C1FD0CC900085BC60 /* CustomLabel.swift in Sources */,
 				EF20C63D1FEA574B00F55DA0 /* SpeakersController.swift in Sources */,
 				EF20C63B1FE9779400F55DA0 /* UIScrollView+ScrollToView.swift in Sources */,
+				EF20C6411FEAEDD400F55DA0 /* OfficialsController.swift in Sources */,
 				EF8B80791FA34BE700A4924E /* CustomUIView.swift in Sources */,
 				EF8B804A1FA32F7800A4924E /* ProfileController.swift in Sources */,
 				EF82BDDB1FCE427700F1BA2F /* ProgrammeController.swift in Sources */,

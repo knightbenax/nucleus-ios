@@ -20,7 +20,10 @@
 	<string>1</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+		<string>comgooglemaps-x-callback</string>
 		<string>comgooglemaps</string>
+		<string>uber</string>
+		<string>uberauth</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
@@ -70,14 +73,9 @@
 	<string>One more step. Choose a photo that would be used as your Avatar</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>One more step. Choose a photo that would be used as your Avatar</string>
-    <key>UberClientID</key>
-    <string>BMWIDT4qmsm5qd5rU819g4TgEwSmQ_-u</string>
-    <key>UberDisplayName</key>
-    <string>Camp Joseph Hailing App</string>
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-        <string>uber</string>
-        <string>uberauth</string>
-    </array>
+	<key>UberClientID</key>
+	<string>BMWIDT4qmsm5qd5rU819g4TgEwSmQ_-u</string>
+	<key>UberDisplayName</key>
+	<string>Camp Joseph Hailing App</string>
 </dict>
 </plist>

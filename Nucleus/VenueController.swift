@@ -17,7 +17,13 @@ class VenueController: UIViewController,  CLLocationManagerDelegate {
     var latitude: CLLocationDegrees = 6.676057699999999
     var longitude: CLLocationDegrees = 3.1714785000000347
     
-    @IBOutlet weak var uberBtn: RideRequestButton!
+    @IBOutlet weak var uberBtn: UIButton!
+    let button = RideRequestButton()
+    
+    @IBAction func uberBtnClick(_ sender: Any) {
+        button.sendActions(for: .touchUpInside)
+    }
+    
     let mainStoryBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
     
     
@@ -87,7 +93,13 @@ class VenueController: UIViewController,  CLLocationManagerDelegate {
         builder.dropoffLocation = dropoffLocation
         builder.dropoffNickname = "CJ 2017 - Faith Academy, Canaanland, Ota"
         
-        uberBtn.rideParameters = builder.build()
+        button.rideParameters = builder.build()
+        button.center = view.center
+        button.isHidden = true
+        //put the button in the view
+        view.addSubview(button)
+        
+        //uberBtn.rideParameters = builder.build()
         //determineMyCurrentLocation()
          //AIzaSyArNf1B72BOCukW8C5FI5PgJvMKeMN-KQ0 
         // Do any additional setup after loading the view, typically from a nib.

@@ -215,7 +215,7 @@ class LoginController: UIViewController, UITextFieldDelegate, ImagePickerDelegat
                             let JSON = result as! NSDictionary
                             let statusText: Bool = JSON.object(forKey: "success")! as! Bool
                             
-                            print(JSON)
+                            //print(JSON)
                             
                             if (statusText == true){
                                 //let tribe = JSON.object(forKey: "tribe") as! String!
@@ -381,7 +381,7 @@ class LoginController: UIViewController, UITextFieldDelegate, ImagePickerDelegat
                             let JSON = result as! NSDictionary
                             let statusText: Bool = JSON.object(forKey: "success")! as! Bool
                             
-                            print(JSON)
+                            //print(JSON)
                             
                             if (statusText == true){
                                 let id = JSON.object(forKey: "last_insert_id") as! Int!

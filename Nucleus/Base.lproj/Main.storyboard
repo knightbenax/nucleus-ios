@@ -483,13 +483,16 @@
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xih-DD-frQ" customClass="RideRequestButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xih-DD-frQ">
                                                 <rect key="frame" x="12" y="108" width="131.66666666666666" height="41"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="18"/>
                                                 <state key="normal" title="Uber">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="uberBtnClick:" destination="UKP-Rl-qSJ" eventType="touchUpInside" id="tMO-Wn-FdF"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYD-YS-Pag">
                                                 <rect key="frame" x="151.66666666666663" y="108" width="131.33333333333337" height="41"/>
@@ -521,7 +524,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Venue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWt-z6-1Xi" customClass="RoundedLabel" customModule="Nucleus" customModuleProvider="target">
-                                        <rect key="frame" x="150.66666666666666" y="48" width="73.666666666666657" height="28"/>
+                                        <rect key="frame" x="151" y="48" width="73.333333333333314" height="28"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="18"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -569,7 +572,7 @@
                     <connections>
                         <outlet property="directionsBtn" destination="XYD-YS-Pag" id="CHB-u2-ain"/>
                         <outlet property="mapView" destination="Gi0-3u-gNm" id="kK2-Oc-37q"/>
-                        <outlet property="uberBtn" destination="xih-DD-frQ" id="6we-fX-qNO"/>
+                        <outlet property="uberBtn" destination="xih-DD-frQ" id="UK2-Qk-TZa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XN7-Ia-gNT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -662,7 +665,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWd-wD-Odk" customClass="RoundedLabel" customModule="Nucleus" customModuleProvider="target">
-                                        <rect key="frame" x="129.33333333333334" y="45" width="117" height="28"/>
+                                        <rect key="frame" x="129.66666666666666" y="45" width="117" height="28"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="18"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -684,7 +687,7 @@
                                         <rect key="frame" x="75" y="81" width="300" height="692"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hXe-14-3Pz">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="821"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="910"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blessing Saghana" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBm-pQ-AfM" userLabel="nameLabel">
                                                         <rect key="frame" x="12" y="10" width="150.33333333333334" height="97.333333333333329"/>
@@ -747,28 +750,45 @@ rainbow@sunshine.com</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ticket" translatesAutoresizingMaskIntoConstraints="NO" id="upL-XC-rbq">
-                                                        <rect key="frame" x="-4" y="423" width="276" height="360"/>
+                                                        <rect key="frame" x="2" y="506" width="280" height="382"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="360" id="IPm-27-4dg"/>
+                                                            <constraint firstAttribute="height" constant="382" id="IPm-27-4dg"/>
                                                         </constraints>
                                                     </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AyB-CS-Afy">
+                                                        <rect key="frame" x="10" y="438" width="262" height="48"/>
+                                                        <color key="backgroundColor" red="0.46274509803921571" green="0.59215686274509804" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="48" id="zph-7F-AXJ"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Cabin-SemiBold" family="Cabin" pointSize="18"/>
+                                                        <state key="normal" title="Check In">
+                                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="checkInBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k2f-Gg-RtD"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="upL-XC-rbq" secondAttribute="trailing" constant="28" id="CfW-tp-Jyz"/>
+                                                    <constraint firstAttribute="trailing" secondItem="upL-XC-rbq" secondAttribute="trailing" constant="18" id="CfW-tp-Jyz"/>
+                                                    <constraint firstAttribute="trailing" secondItem="AyB-CS-Afy" secondAttribute="trailing" constant="28" id="IML-Te-ibU"/>
                                                     <constraint firstItem="UBR-Ag-OB2" firstAttribute="top" secondItem="O1T-Xa-xhi" secondAttribute="bottom" constant="30" id="JQQ-Sl-j09"/>
                                                     <constraint firstItem="UBR-Ag-OB2" firstAttribute="leading" secondItem="hXe-14-3Pz" secondAttribute="leading" constant="12" id="Jf9-eV-Ero"/>
                                                     <constraint firstAttribute="trailing" secondItem="O1T-Xa-xhi" secondAttribute="trailing" priority="900" constant="28" id="ZgB-q6-QyF"/>
                                                     <constraint firstItem="O1T-Xa-xhi" firstAttribute="leading" secondItem="hXe-14-3Pz" secondAttribute="leading" constant="12" id="aSS-PX-lbZ"/>
-                                                    <constraint firstItem="upL-XC-rbq" firstAttribute="top" secondItem="UBR-Ag-OB2" secondAttribute="bottom" constant="15" id="b2Q-ve-EqY"/>
+                                                    <constraint firstItem="AyB-CS-Afy" firstAttribute="leading" secondItem="hXe-14-3Pz" secondAttribute="leading" constant="10" id="amm-FX-WGo"/>
                                                     <constraint firstItem="oBm-pQ-AfM" firstAttribute="top" secondItem="hXe-14-3Pz" secondAttribute="top" constant="10" id="bZJ-zc-0Hq"/>
                                                     <constraint firstItem="SiE-Dm-HSc" firstAttribute="top" secondItem="oBm-pQ-AfM" secondAttribute="bottom" constant="20" id="bsr-Rc-VEj"/>
                                                     <constraint firstAttribute="trailing" secondItem="RZ3-Fs-X9V" secondAttribute="trailing" priority="900" constant="28" id="fBa-3K-Ykv"/>
                                                     <constraint firstItem="RZ3-Fs-X9V" firstAttribute="leading" secondItem="hXe-14-3Pz" secondAttribute="leading" constant="12" id="heF-hN-ayE"/>
+                                                    <constraint firstItem="upL-XC-rbq" firstAttribute="top" secondItem="AyB-CS-Afy" secondAttribute="bottom" constant="20" id="jNa-8p-n7z"/>
                                                     <constraint firstItem="RZ3-Fs-X9V" firstAttribute="top" secondItem="SiE-Dm-HSc" secondAttribute="bottom" constant="30" id="kmn-PI-J82"/>
-                                                    <constraint firstAttribute="height" constant="821" id="m3K-ep-3oF"/>
+                                                    <constraint firstAttribute="height" constant="910" id="m3K-ep-3oF"/>
                                                     <constraint firstItem="oBm-pQ-AfM" firstAttribute="leading" secondItem="hXe-14-3Pz" secondAttribute="leading" constant="12" id="mhu-Hp-Vy3"/>
                                                     <constraint firstAttribute="trailing" secondItem="UBR-Ag-OB2" secondAttribute="trailing" priority="900" constant="28" id="nbu-Fz-lZc"/>
-                                                    <constraint firstItem="upL-XC-rbq" firstAttribute="leading" secondItem="hXe-14-3Pz" secondAttribute="leading" constant="-4" id="vMM-pO-IYy"/>
+                                                    <constraint firstItem="AyB-CS-Afy" firstAttribute="top" secondItem="UBR-Ag-OB2" secondAttribute="bottom" constant="30" id="uyZ-zo-77h"/>
+                                                    <constraint firstItem="upL-XC-rbq" firstAttribute="leading" secondItem="hXe-14-3Pz" secondAttribute="leading" constant="2" id="vMM-pO-IYy"/>
                                                     <constraint firstAttribute="trailing" secondItem="SiE-Dm-HSc" secondAttribute="trailing" priority="900" constant="28" id="y8Q-0l-7NM"/>
                                                     <constraint firstItem="O1T-Xa-xhi" firstAttribute="top" secondItem="RZ3-Fs-X9V" secondAttribute="bottom" constant="30" id="zcO-CY-5NB"/>
                                                     <constraint firstItem="SiE-Dm-HSc" firstAttribute="leading" secondItem="hXe-14-3Pz" secondAttribute="leading" constant="12" id="zuz-3o-f7f"/>
@@ -781,7 +801,6 @@ rainbow@sunshine.com</string>
                                             <constraint firstItem="hXe-14-3Pz" firstAttribute="top" secondItem="Oux-97-yC4" secondAttribute="top" id="VHV-FI-pPd"/>
                                             <constraint firstItem="hXe-14-3Pz" firstAttribute="leading" secondItem="Oux-97-yC4" secondAttribute="leading" id="Z54-2I-kZk"/>
                                             <constraint firstAttribute="bottom" secondItem="hXe-14-3Pz" secondAttribute="bottom" id="iEf-nO-Grf"/>
-                                            <constraint firstItem="hXe-14-3Pz" firstAttribute="centerY" secondItem="Oux-97-yC4" secondAttribute="centerY" constant="64.5" id="jRF-Y9-yQE"/>
                                         </constraints>
                                     </scrollView>
                                 </subviews>
@@ -811,14 +830,19 @@ rainbow@sunshine.com</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mNf-Qh-BQE"/>
                     </view>
+                    <size key="freeformSize" width="375" height="812"/>
                     <connections>
                         <outlet property="associateLabel" destination="SiE-Dm-HSc" id="CIb-tv-0am"/>
                         <outlet property="bgImage" destination="O3Q-54-VWb" id="h9z-sm-Uck"/>
+                        <outlet property="checkInBtn" destination="AyB-CS-Afy" id="CLh-zZ-b80"/>
+                        <outlet property="checkInHeight" destination="zph-7F-AXJ" id="WtT-PX-qzL"/>
+                        <outlet property="checkInTop" destination="uyZ-zo-77h" id="N8x-GM-geF"/>
                         <outlet property="contactLabel" destination="RZ3-Fs-X9V" id="ux8-hO-iEg"/>
                         <outlet property="firstHeardLabel" destination="O1T-Xa-xhi" id="0iE-Ey-Bto"/>
                         <outlet property="firstTimeLabel" destination="UBR-Ag-OB2" id="ub0-jT-x59"/>
                         <outlet property="mainParent" destination="frn-cv-NZK" id="SbM-3E-64f"/>
                         <outlet property="nameLabel" destination="oBm-pQ-AfM" id="rKC-C8-2xa"/>
+                        <outlet property="ticketImage" destination="upL-XC-rbq" id="PBW-kq-TIw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -1433,9 +1457,9 @@ She is the better-half of the founder of Young Disciples International; Pastor J
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yD-Iw-TqM">
                                                                 <rect key="frame" x="10" y="1337.3333333333333" width="280" height="516.66666666666674"/>
-                                                                <mutableString key="text">Temitayo Bukoye - Chartered Arbitrator and Chartered Secretary and Administrator
+                                                                <string key="text">Temitayo Bukoye - Chartered Arbitrator and Chartered Secretary and Administrator
 
-Temitayo Bukoye was one of the 8 young Nigerians to have come out of the Nigerian Law School with a First-Class degree in 2015. She graduated top of her class from the Class of 2014 at the Babcock University School of Law and Security Studies, having qualified as a Chartered Arbitrator and Chartered Secretary and Administrator with distinctions. Tayo has since been attached to the corporate commercial department of the law firm of G. Elias &amp; Co, one of the top tier law firms in Nigeria and has been recognized for several awards for her academic prowess and service to humanity. She likes to read, travel and listen to music in her pass time. She will be speaking Grades, Purpose and Abilities (GPA): Striking a balance for Academic Heights </mutableString>
+Temitayo Bukoye was one of the 8 young Nigerians to have come out of the Nigerian Law School with a First-Class degree in 2015. She graduated top of her class from the Class of 2014 at the Babcock University School of Law and Security Studies, having qualified as a Chartered Arbitrator and Chartered Secretary and Administrator with distinctions. Tayo has since been attached to the corporate commercial department of the law firm of G. Elias &amp; Co, one of the top tier law firms in Nigeria and has been recognized for several awards for her academic prowess and service to humanity. She likes to read, travel and listen to music in her pass time. She will be speaking Grades, Purpose and Abilities (GPA): Striking a balance for Academic Heights </string>
                                                                 <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -1449,9 +1473,9 @@ Temitayo Bukoye was one of the 8 young Nigerians to have come out of the Nigeria
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6w-ci-14O">
                                                                 <rect key="frame" x="10" y="1984" width="280" height="496"/>
-                                                                <mutableString key="text">Adedayo Nigeria - COMMUNITY DEVELOPENT ADVOCATE AND LEADERSHIP COACH
+                                                                <string key="text">Adedayo Nigeria - COMMUNITY DEVELOPENT ADVOCATE AND LEADERSHIP COACH
 
-Adedayo holds a Bachelor of Arts in English Literature from Obafemi Awolowo University and he has authored 3 books on leadership development and written numerous unpublished poems. He was recognized as one of the 1,000 outstanding young leaders committed to impacting the continent from Sub-Saharan Africa and was selected to participate in Mandela Washington Fellowship for Young African Leaders Initiative started off by the former US President, Barack Obama.Adedayo trained as a civic leader at the Staley School of Leadership Studies, Kansas State University and runs a Leadership Clinic in 4 Nigerian States among many other leadership sessions he facilitates across the country.</mutableString>
+Adedayo holds a Bachelor of Arts in English Literature from Obafemi Awolowo University and he has authored 3 books on leadership development and written numerous unpublished poems. He was recognized as one of the 1,000 outstanding young leaders committed to impacting the continent from Sub-Saharan Africa and was selected to participate in Mandela Washington Fellowship for Young African Leaders Initiative started off by the former US President, Barack Obama.Adedayo trained as a civic leader at the Staley School of Leadership Studies, Kansas State University and runs a Leadership Clinic in 4 Nigerian States among many other leadership sessions he facilitates across the country.</string>
                                                                 <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -1465,9 +1489,9 @@ Adedayo holds a Bachelor of Arts in English Literature from Obafemi Awolowo Univ
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fc6-Yp-axi">
                                                                 <rect key="frame" x="10" y="2610" width="280" height="454.66666666666652"/>
-                                                                <mutableString key="text">Kunbi - ED of SESEWA
+                                                                <string key="text">Kunbi - ED of SESEWA
 
-Kunbi is the executive director of SESEWA; a company she founded while still in university in 2009. She holds an LLB from Obafemi Awolowo University and was enrolled as a solicitor and advocate of the Supreme Court of Nigeria in 2010. Her company, SESEWA is at the forefront of providing internship and career opportunities for Nigeria's young generation and she is building a legacy for internship businesses in Nigeria. Adekunbi is a frequent speaker at youth events, and a big inspiration for young people in Africa. Upon completion of the Mandela Washington Fellowship, she hopes to expand SESEWA programs across several states in Nigeria and beyond to neighboring cities in Africa</mutableString>
+Kunbi is the executive director of SESEWA; a company she founded while still in university in 2009. She holds an LLB from Obafemi Awolowo University and was enrolled as a solicitor and advocate of the Supreme Court of Nigeria in 2010. Her company, SESEWA is at the forefront of providing internship and career opportunities for Nigeria's young generation and she is building a legacy for internship businesses in Nigeria. Adekunbi is a frequent speaker at youth events, and a big inspiration for young people in Africa. Upon completion of the Mandela Washington Fellowship, she hopes to expand SESEWA programs across several states in Nigeria and beyond to neighboring cities in Africa</string>
                                                                 <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="17"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>

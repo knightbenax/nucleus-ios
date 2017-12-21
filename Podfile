@@ -10,6 +10,7 @@ target 'Nucleus' do
   pod 'Alamofire', '~> 4.5'
   pod 'RZTransitions'
   pod 'ImagePicker'
+  pod 'PopupDialog', '~> 0.5'
 
   # Pods for Nucleus
 

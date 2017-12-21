@@ -37,6 +37,7 @@ class ProfileController: UIViewController {
     }
     
     @IBOutlet weak var checkInBtn: UIButton!
+    var alert_gee: UIAlertController!
     
     @IBAction func checkInBtnClick(_ sender: Any) {
         
@@ -45,7 +46,7 @@ class ProfileController: UIViewController {
         let buttonTwo = DefaultButton(title: "Check In") {
             //self.label.text = "What a beauty!"
             popup.dismiss()
-            let alert_gee = self.displaySignUpPendingAlert()
+            self.alert_gee = self.displaySignUpPendingAlert()
         }
         
         let buttonOne = DefaultButton(title: "Not Yet") {
@@ -107,7 +108,7 @@ class ProfileController: UIViewController {
         spinner.center = pending.view.center
         spinner.startAnimating()
         
-        let id = UserDefaults.standard.object(forKey: "savedID") as? String
+        let id = UserDefaults.standard.object(forKey: "savedID") as? Int
         
         let parameters: Parameters = [
             "id": id!
@@ -130,6 +131,15 @@ class ProfileController: UIViewController {
                             //let tribe = JSON.object(forKey: "tribe") as! String!
                             let saved = "Yes"
                             UserDefaults.standard.set(saved, forKey: "savedArrival")
+                            self.alert_gee.dismiss(animated: true, completion: nil)
+                            
+                            self.checkInBtn.isHidden = true
+                            self.checkInTop.constant = 0
+                            self.checkInHeight.constant = 0
+                            let ticket = UIImage(named: "ticket_admitted")
+                            self.ticketImage.image = ticket
+                            
+                            
                         }
                     }
                 default:
@@ -199,9 +209,9 @@ class ProfileController: UIViewController {
                     }
                     
                 } else {
-                    checkInBtn.isHidden = false
-                    checkInTop.constant = 30
-                    checkInHeight.constant = 48
+                    checkInBtn.isHidden = true
+                    checkInTop.constant = 0
+                    checkInHeight.constant = 0
                     //checkInBtn.frame.height = 0
                 }
                 

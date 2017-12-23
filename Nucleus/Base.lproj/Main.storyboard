@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -709,28 +710,21 @@
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZ3-Fs-X9V">
-                                                        <rect key="frame" x="12" y="180" width="260" height="58.333333333333343"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZ3-Fs-X9V">
+                                                        <rect key="frame" x="12" y="180" width="260" height="65.666666666666686"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="260" id="KgT-TX-6ot"/>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="fIN-0U-h2u"/>
                                                         </constraints>
-                                                        <attributedString key="attributedText">
-                                                            <fragment>
-                                                                <string key="content">Designer for Dolce &amp; Gabbana
+                                                        <string key="text">Designer for Dolce &amp; Gabbana
 08012345678
 rainbow@sunshine.com</string>
-                                                                <attributes>
-                                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                                    <font key="NSFont" size="16" name="Cabin-Regular"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
+                                                        <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="18"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First heard about Camp Joseph while doing a handstand on a bike on a  thin rope on a trampoline on a burning moving train. " textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1T-Xa-xhi">
-                                                        <rect key="frame" x="12" y="268.33333333333331" width="260" height="87.666666666666686"/>
+                                                        <rect key="frame" x="12" y="275.66666666666669" width="260" height="87.666666666666686"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="HO8-md-xTs"/>
                                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="260" id="fkZ-7f-2cl"/>
@@ -740,7 +734,7 @@ rainbow@sunshine.com</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not first time at Camp Joseph" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBR-Ag-OB2">
-                                                        <rect key="frame" x="12" y="386" width="260" height="22"/>
+                                                        <rect key="frame" x="12" y="393.33333333333331" width="260" height="22"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="260" id="HI1-No-fYa"/>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="Xpq-qV-VPx"/>
@@ -750,13 +744,13 @@ rainbow@sunshine.com</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ticket" translatesAutoresizingMaskIntoConstraints="NO" id="upL-XC-rbq">
-                                                        <rect key="frame" x="2" y="506" width="280" height="382"/>
+                                                        <rect key="frame" x="2" y="513.33333333333337" width="280" height="382"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="382" id="IPm-27-4dg"/>
                                                         </constraints>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AyB-CS-Afy">
-                                                        <rect key="frame" x="10" y="438" width="262" height="48"/>
+                                                        <rect key="frame" x="10" y="445.33333333333337" width="262" height="48"/>
                                                         <color key="backgroundColor" red="0.46274509803921571" green="0.59215686274509804" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="48" id="zph-7F-AXJ"/>

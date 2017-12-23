@@ -15,9 +15,9 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.1</string>
+	<string>1.2</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>2</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>comgooglemaps-x-callback</string>
@@ -31,8 +31,17 @@
 	<string>pk.eyJ1Ijoia25pZ2h0YmVuYXgiLCJhIjoiY2lnYzQ3ZGZxMmV6MndibTMzb3hhM2syYyJ9.Z86x61Ogi-DVrcNB2URI9w</string>
 	<key>MGLMapboxMetricsEnabledSettingShownInApp</key>
 	<string>YES</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>One more step. Choose a photo that would be used as your Avatar</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Shows directions from you to Faith Academy, Canaanland, Ota</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>One more step. Choose a photo that would be used as your Avatar</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Cabin-Bold-TTF.ttf</string>
@@ -64,15 +73,6 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
-	<key>NSCameraUsageDescription</key>
-	<string>One more step. Choose a photo that would be used as your Avatar</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>One more step. Choose a photo that would be used as your Avatar</string>
 	<key>UberClientID</key>
 	<string>BMWIDT4qmsm5qd5rU819g4TgEwSmQ_-u</string>
 	<key>UberDisplayName</key>

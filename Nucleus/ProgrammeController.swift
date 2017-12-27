@@ -189,8 +189,6 @@ class ProgrammeController: UIViewController {
         formatter.dateFormat = "dd.MM.yyyy"
         let result = formatter.string(from: date)
         
-        
-        
         if(result == "27.12.2017"){
             
             oneBtn.haveFocus()

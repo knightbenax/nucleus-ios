@@ -1386,7 +1386,7 @@ rainbow@sunshine.com</string>
                                                 <rect key="frame" x="0.0" y="10" width="300" height="682"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wnM-UI-KYf">
-                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="3085"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="3285"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sam" translatesAutoresizingMaskIntoConstraints="NO" id="WDW-mc-lPb">
                                                                 <rect key="frame" x="10" y="10" width="80" height="80"/>
@@ -1527,7 +1527,7 @@ Kunbi is the executive director of SESEWA; a company she founded while still in 
                                                             <constraint firstAttribute="trailing" secondItem="nfh-07-Vol" secondAttribute="trailing" constant="10" id="nAz-kG-RZ6"/>
                                                             <constraint firstAttribute="trailing" secondItem="C6w-ci-14O" secondAttribute="trailing" constant="10" id="qCZ-4s-UaK"/>
                                                             <constraint firstItem="xRO-1x-RhH" firstAttribute="top" secondItem="crN-6o-cCY" secondAttribute="bottom" constant="10" id="xaW-Ri-NGc"/>
-                                                            <constraint firstAttribute="height" constant="3085" id="ym5-Kq-3Uf"/>
+                                                            <constraint firstAttribute="height" constant="3285" id="ym5-Kq-3Uf"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
